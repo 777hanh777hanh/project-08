@@ -132,7 +132,11 @@ $grid-gutter-width: 24px !default;
 
     @include makeMediaQuery($dimension) {
         .container {
-            max-width: $maxWidth + $grid-gutter-width;
+            @if ($breakpoint == 'xs') {
+                max-width: 100%;
+            } @else {
+                max-width: $maxWidth + $grid-gutter-width;
+            }
         }
 
         @include makeRowCols($infix);
