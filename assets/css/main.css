@@ -1,4 +1,10 @@
 @import url("https://cdn.jsdelivr.net/gh/777hanh777hanh/reset-css/assets/css/resetcss/reset.min.css");
+:root {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(9%) sepia(20%) saturate(1683%) hue-rotate(210deg)
+      brightness(92%) contrast(97%);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -6,6 +12,16 @@ html {
 body {
   font-family: "Gordita", sans-serif;
   font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon {
+  filter: var(--icon-color);
 }
 
 /* Grid System */
@@ -1189,6 +1205,85 @@ body {
   .gy-xxl-6 {
     --grid-gutter-y: 72px;
   }
+}
+.top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background: #eee;
+}
+
+.top-bar {
+  padding: 3rem 0;
+}
+
+.navbar {
+  margin-left: 11.4rem;
+}
+.navbar__list {
+  gap: 3rem;
+}
+.navbar__link {
+  gap: 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.navbar__arrow {
+  margin-top: 0.3rem;
+}
+
+.top-act {
+  margin-left: auto;
+  gap: 2rem;
+}
+.top-act__group {
+  padding: 1.3rem;
+  min-width: 5rem;
+  height: 5rem;
+  gap: 2rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.top-act__group--multi {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.top-act__btn {
+  gap: 1rem;
+  cursor: pointer;
+}
+.top-act__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.top-act__separate {
+  background: var(--Secondary-Color-Secondary-4, #ededf6);
+  width: 0.1rem;
+  height: 100%;
+  min-height: 3rem;
+}
+.top-act__avatar {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+.logo__brand {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 145.455%;
 }
 
 /*# sourceMappingURL=main.css.map */
