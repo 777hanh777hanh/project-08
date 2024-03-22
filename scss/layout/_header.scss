@@ -7,6 +7,10 @@
 
 .header {
     background: var(--header-bg-color);
+
+    @include abstracts.breakpoint(md) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
 }
 
 .top-bar {
@@ -31,7 +35,7 @@
 }
 
 .navbar {
-    margin-left: 11.4rem;
+    margin-left: 114px;
     @include abstracts.breakpoint(xl) {
         margin-left: auto;
     }
@@ -51,13 +55,6 @@
                 display: block;
             }
         }
-
-        &:first-child &__link {
-            padding-left: 0;
-        }
-        &:last-child &__link {
-            padding-right: 0;
-        }
     }
 
     &__link {
@@ -68,6 +65,10 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        @include abstracts.breakpoint(xl) {
+            padding: 0 2rem;
+        }
     }
 
     &__arrow {
@@ -80,7 +81,7 @@
     margin-left: auto;
     gap: 2rem;
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin-left: 0;
     }
 
@@ -94,7 +95,7 @@
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow-color);
 
-        @include abstracts.breakpoint(sm) {
+        @include abstracts.breakpoint(md) {
             display: none;
         }
 
