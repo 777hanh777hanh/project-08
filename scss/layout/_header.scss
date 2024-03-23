@@ -40,11 +40,59 @@
         margin-left: auto;
     }
     @include abstracts.breakpoint(lg) {
+        position: fixed;
+        background-color: var(--navbar-bg-color);
+        inset: 0 36% 0 0;
+        padding: 20px 0;
+        translate: -100%;
+        z-index: 9;
+
+        transition: translate 0.5s ease-in;
+
+        &.show {
+            translate: 0;
+        }
+
+        &.show ~ &__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    @include abstracts.breakpoint(sm) {
+        inset: 0 0 0 0;
+    }
+
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+        transition-property: opacity, visibility;
+
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            background: rgba($color: #000, $alpha: 0.4);
+            z-index: 8;
+        }
+    }
+
+    &__close-btn {
         display: none;
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            padding: 10px 40px;
+            cursor: pointer;
+        }
     }
 
     &__list {
         @extend %flexItemsCenter;
+
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__item {
@@ -53,6 +101,14 @@
                 visibility: visible;
                 opacity: 1;
                 display: block;
+            }
+        }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+
+            &:hover .dropdown {
+                display: none;
             }
         }
     }
@@ -68,6 +124,13 @@
 
         @include abstracts.breakpoint(xl) {
             padding: 0 2rem;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            font-size: 1.6rem;
+            padding: 0 4rem;
+            line-height: 150%;
+            justify-content: space-between;
         }
     }
 
@@ -115,6 +178,7 @@
         @extend %flexItemsCenter;
         gap: 1rem;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
     }
 
     &__title {
