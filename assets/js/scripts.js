@@ -140,3 +140,35 @@ function handleActiveMenu() {
         dropdown.onmouseleave = () => init();
     });
 }
+
+/**
+ * Chuyển đổi giao diện dark/light
+ *
+ * Thêm class '.js-dark-mode-toggle' vào button chuyển đổi mode
+ */
+
+function initModeInterface() {
+    const darkMode = JSON.parse(localStorage.getItem('dark-mode'));
+
+    if (darkMode) {
+        document.documentElement.classList.add('dark');
+    }
+}
+
+function handleModeInterface() {
+    const darkModeToggle = $('.js-dark-mode-toggle');
+
+    darkModeToggle.onclick = () => {
+        document.documentElement.classList.toggle('dark');
+        const currentMode = JSON.parse(localStorage.getItem('dark-mode'));
+        const newMode = !currentMode;
+        console.log('Dark mode:', newMode);
+        localStorage.setItem('dark-mode', newMode.toString());
+    };
+}
+
+// Khởi tạo giao diện dark/light
+initModeInterface();
+
+// Thêm sự kiện chuyển đổi giao diện dark/light khi DOM sẵn sàng
+window.addEventListener('DOMContentLoaded', handleModeInterface);

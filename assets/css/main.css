@@ -19,6 +19,29 @@ a {
   filter: var(--icon-color);
 }
 
+.dark-mode {
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  width: 5rem;
+  height: 5rem;
+  color: var(--text-color);
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  opacity: 0;
+  transition: 0.125s linear;
+  transition-delay: 1.5s;
+  transition-property: opacity, visibility;
+}
+.dark-mode:hover {
+  cursor: pointer;
+  color: var(--text-color);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: initial;
+  transition-property: opacity, visibility;
+}
+
 /* Grid System */
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
