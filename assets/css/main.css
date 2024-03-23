@@ -1234,6 +1234,92 @@ a {
     --grid-gutter-y: 72px;
   }
 }
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (max-width: 1399.98px) {
+  .d-xxl-block {
+    display: block !important;
+  }
+  .d-xxl-flex {
+    display: flex !important;
+  }
+  .d-xxl-grid {
+    display: grid !important;
+  }
+  .d-xxl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .d-xl-block {
+    display: block !important;
+  }
+  .d-xl-flex {
+    display: flex !important;
+  }
+  .d-xl-grid {
+    display: grid !important;
+  }
+  .d-xl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-grid {
+    display: grid !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-flex {
+    display: flex !important;
+  }
+  .d-md-grid {
+    display: grid !important;
+  }
+  .d-md-none {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-flex {
+    display: flex !important;
+  }
+  .d-sm-grid {
+    display: grid !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+}
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%) hue-rotate(61deg)
@@ -1311,13 +1397,7 @@ html {
   }
 }
 .top-bar__more {
-  display: none;
   cursor: pointer;
-}
-@media (max-width: 991.98px) {
-  .top-bar__more {
-    display: block;
-  }
 }
 
 .navbar {
@@ -1365,12 +1445,8 @@ html {
     z-index: 8;
   }
 }
-.navbar__close-btn {
-  display: none;
-}
 @media (max-width: 991.98px) {
   .navbar__close-btn {
-    display: block;
     padding: 10px 40px;
     cursor: pointer;
   }
@@ -1437,19 +1513,9 @@ html {
   background: var(--top-act-group-bg-color);
   box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow-color);
 }
-@media (max-width: 767.98px) {
-  .top-act__group {
-    display: none;
-  }
-}
 .top-act__group--multi {
   padding-right: 2rem;
   padding-left: 2rem;
-}
-@media (max-width: 991.98px) {
-  .top-act__group:not(.top-act__group--multi) {
-    display: none;
-  }
 }
 .top-act__btn {
   gap: 1rem;

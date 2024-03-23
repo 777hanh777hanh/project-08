@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- More -->
-        <button type="button" class="top-bar__more js-toggle" toggle-target="#navbar">
+        <button type="button" class="top-bar__more d-none d-lg-block js-toggle" toggle-target="#navbar">
             <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon" />
         </button>
 
@@ -14,7 +14,11 @@
         <!-- Navbar -->
         <nav id="navbar" class="navbar hide">
             <!-- close button -->
-            <button class="navbar__close-btn icon js-toggle" toggle-target="#navbar" type="button">
+            <button
+                class="navbar__close-btn icon d-none d-lg-block js-toggle"
+                toggle-target="#navbar"
+                type="button"
+            >
                 <img src="./assets/icons/arrow-left.svg" alt="" />
             </button>
 
@@ -5874,13 +5878,13 @@
 
         <!-- Action -->
         <div class="top-act">
-            <div class="top-act__group">
+            <div class="top-act__group d-md-none d-lg-none">
                 <div class="top-act__btn">
                     <img src="./assets/icons/search.svg" alt="" class="icon top-act__icon" />
                 </div>
             </div>
 
-            <div class="top-act__group top-act__group--multi">
+            <div class="top-act__group top-act__group--multi d-md-none">
                 <div class="top-act__btn">
                     <img src="./assets/icons/heart.svg" alt="" class="icon top-act__icon" />
                     <span class="top-act__title">03</span>
