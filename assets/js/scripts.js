@@ -106,6 +106,7 @@ window.addEventListener('template-loaded', calArrowPos);
  *  nếu muốn reset lại item active khi ẩn menu
  */
 window.addEventListener('template-loaded', handleActiveMenu);
+window.addEventListener('resize', handleActiveMenu);
 
 function handleActiveMenu() {
     const dropdowns = $$('.js-dropdown');
@@ -122,13 +123,27 @@ function handleActiveMenu() {
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
+
+            let currentItem = null;
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    if (currentItem === item) {
+                        currentItem.classList.remove(activeClass);
+                        currentItem = null;
+                    } else {
+                        item.classList.add(activeClass);
+                        item.scrollIntoView({ behavior: 'smooth' });
+                        currentItem = item;
+                    }
                 };
             });
         });
@@ -201,3 +216,15 @@ function initJsToggle() {
         };
     });
 }
+
+window.addEventListener('template-loaded', () => {
+    const links = $$('.js-dropdown-list > li > a');
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest('li');
+            item.classList.toggle('navbar__item--active');
+        };
+    });
+});
