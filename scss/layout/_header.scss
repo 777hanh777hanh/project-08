@@ -31,21 +31,26 @@
 
 .navbar {
     margin-left: 114px;
+
     @include abstracts.breakpoint(xl) {
         margin-left: auto;
     }
+
     @include abstracts.breakpoint(lg) {
         position: fixed;
-        background-color: var(--navbar-bg-color);
         inset: 0 36% 0 0;
         padding: 20px 0;
+        border-radius: 0 20px 20px 0;
+        background-color: var(--sidebar-bg-color);
         translate: -100%;
         z-index: 9;
 
-        transition: translate 0.5s ease-in;
+        transition: 0.5s ease-in;
+        transition-property: box-shadow, translate;
 
         &.show {
             translate: 0;
+            box-shadow: 0px 40px 90px 20px var(--sidebar-shadow-color);
         }
 
         &.show ~ &__overlay {
@@ -54,7 +59,7 @@
         }
     }
     @include abstracts.breakpoint(sm) {
-        inset: 0 0 0 0;
+        inset: 0 24% 0 0;
     }
 
     &__overlay {
@@ -76,6 +81,10 @@
             padding: 10px 40px;
             cursor: pointer;
         }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 10px 50px 10px 20px;
+        }
     }
 
     &__list {
@@ -87,6 +96,11 @@
             height: calc(100vh - 64px);
             padding-bottom: 20px;
             overflow-y: auto;
+            overscroll-behavior: contain;
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100vh - 152px);
         }
     }
 
@@ -131,6 +145,10 @@
             padding: 1rem 4rem;
             line-height: 150%;
             justify-content: space-between;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 1rem 2rem;
         }
     }
 
@@ -202,5 +220,26 @@
         height: $h;
         border-radius: 8px;
         cursor: pointer;
+    }
+}
+
+.nav-btn {
+    align-items: center;
+    gap: 16px;
+    padding: 10px 40px;
+
+    @include abstracts.breakpoint(sm) {
+        padding: 10px 20px;
+    }
+
+    &__title,
+    &__qnt {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__qnt {
+        margin-left: auto;
     }
 }

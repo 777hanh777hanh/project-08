@@ -15,8 +15,6 @@ html.dark {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
-    --navbar-bg-color: #292e39;
-
     // Dropdown component
     --dropdown-bg-color: #2f3441;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
@@ -26,4 +24,8 @@ html.dark {
     --top-menu-border-color: #d2d1d6;
     --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(20%) saturate(296%)
         hue-rotate(206deg) brightness(99%) contrast(97%);
+
+    // sidebar
+    --sidebar-bg-color: #292e39;
+    --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
 }
