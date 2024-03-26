@@ -1337,13 +1337,18 @@ html.dark {
   --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(20%) saturate(296%)
       hue-rotate(206deg) brightness(99%) contrast(97%);
   --navbar-text-color: #b9babe;
-  --navbar-text-active-color: #fff;
+  --navbar-text-active-color: #0071dc;
   --sidebar-bg-color: #292e39;
   --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 991.98px) {
+  html.dark {
+    --navbar-text-active-color: #fff;
   }
 }
 
@@ -1434,6 +1439,9 @@ html {
     visibility: visible;
     opacity: 1;
   }
+  .navbar__item--active .navbar__link {
+    color: var(--navbar-text-active-color);
+  }
 }
 @media (max-width: 575.98px) {
   .navbar {
@@ -1493,9 +1501,6 @@ html {
   .navbar__item--active .dropdown {
     display: block !important;
   }
-}
-.navbar__item--active .navbar__link {
-  color: var(--navbar-text-active-color);
 }
 .navbar__link {
   padding: 0 3rem;

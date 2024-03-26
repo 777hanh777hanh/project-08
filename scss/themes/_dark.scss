@@ -27,7 +27,10 @@ html.dark {
 
     //navbar
     --navbar-text-color: #b9babe;
-    --navbar-text-active-color: #fff;
+    --navbar-text-active-color: #0071dc;
+    @include abstracts.breakpoint(lg) {
+        --navbar-text-active-color: #fff;
+    }
 
     // sidebar
     --sidebar-bg-color: #292e39;

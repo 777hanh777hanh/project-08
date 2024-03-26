@@ -57,6 +57,10 @@
             visibility: visible;
             opacity: 1;
         }
+
+        &__item--active &__link {
+            color: var(--navbar-text-active-color);
+        }
     }
     @include abstracts.breakpoint(sm) {
         inset: 0 24% 0 0;
@@ -124,10 +128,6 @@
                 display: block !important;
             }
         }
-    }
-
-    &__item--active &__link {
-        color: var(--navbar-text-active-color);
     }
 
     &__link {
