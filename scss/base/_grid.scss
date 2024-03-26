@@ -3,18 +3,18 @@
 /* Grid System */
 $grid-breakpoints: (
     xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
     xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
 ) !default;
 $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1340px,
+    sm: 100%,
+    md: 540px,
+    lg: 720px,
+    xl: 960px,
+    xxl: 1140px,
 ) !default;
 $gutters: (
     0: 0,
@@ -45,6 +45,7 @@ $grid-gutter-width: 24px !default;
 }
 .container {
     @extend .container-fluid;
+    width: 1340px;
 }
 
 .text-center {
@@ -73,13 +74,13 @@ $grid-gutter-width: 24px !default;
     @if $dimension == 0 {
         @content;
     } @else {
-        @media (min-width: $dimension) {
+        @media (max-width: ($dimension - 0.02)) {
             @content;
         }
     }
 }
 
-@mixin makeRowCols($infix) {
+@mixin makeRowCols($infix: null) {
     @for $i from 1 through $grid-row-cols-number {
         .row-cols#{$infix}-#{$i} > * {
             flex: 0 0 auto;
@@ -88,7 +89,7 @@ $grid-gutter-width: 24px !default;
     }
 }
 
-@mixin makeOffset($infix) {
+@mixin makeOffset($infix: null) {
     @for $i from 0 to $grid-columns {
         .offset#{$infix}-#{$i} {
             @if $i == 0 {
@@ -100,7 +101,7 @@ $grid-gutter-width: 24px !default;
     }
 }
 
-@mixin makeCols($infix) {
+@mixin makeCols($infix: null) {
     @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
             flex: 0 0 auto;
@@ -109,7 +110,7 @@ $grid-gutter-width: 24px !default;
     }
 }
 
-@mixin makeGutters($infix) {
+@mixin makeGutters($infix: null) {
     @each $i, $ratio in $gutters {
         .g#{$infix}-#{$i} {
             --grid-gutter-x: #{$grid-gutter-width * $ratio};
@@ -132,7 +133,7 @@ $grid-gutter-width: 24px !default;
 
     @include makeMediaQuery($dimension) {
         .container {
-            @if ($breakpoint == 'xs') {
+            @if ($breakpoint == 'xs' or $breakpoint == 'sm') {
                 max-width: 100%;
             } @else {
                 max-width: $maxWidth + $grid-gutter-width;

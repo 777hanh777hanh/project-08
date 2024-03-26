@@ -5,7 +5,7 @@
     align-items: center;
     gap: 1.4rem;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         gap: 1rem;
         margin-left: auto;
         margin-right: auto;
@@ -17,13 +17,13 @@
         line-height: 145.455%;
         color: var(--text-color);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             font-size: 1.8rem;
         }
     }
 
     &__img {
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 28px;
         }
     }

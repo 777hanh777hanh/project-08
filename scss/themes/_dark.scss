@@ -11,7 +11,7 @@ html.dark {
     --top-act-group-shadow-color: rgba(0, 0, 0, 0.2);
     --top-act-group-separate-color: #ededf6;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -28,7 +28,7 @@ html.dark {
     //navbar
     --navbar-text-color: #b9babe;
     --navbar-text-active-color: #0071dc;
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         --navbar-text-active-color: #fff;
     }
 

@@ -22,12 +22,42 @@
         <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
+        <!-- header -->
         <header id="header" class="header"></header>
+        <script async>
+            loadComponent('#header', './templates/header.html');
+        </script>
         <div class="container">
-            <script async>
-                loadComponent('#header', './templates/header.html');
-            </script>
-            <main id="main" class="main">Home Page</main>
+            <!-- main -->
+            <main id="main" class="main">
+                <!-- slideshow -->
+                <section class="slideshow">
+                    <div class="slideshow__inner d-flex">
+                        <div class="slideshow__item">
+                            <picture>
+                                <source
+                                    media="(max-width: 767.98px)"
+                                    srcset="./assets/img/slideshow/item-1-md.png"
+                                />
+                                <img
+                                    src="./assets/img/slideshow/item-1.png"
+                                    alt=""
+                                    class="slideshow__img"
+                                    srcset=""
+                                />
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="slideshow__page d-flex">
+                        <span class="slideshow__num">1</span>
+                        <span class="slideshow__slider"></span>
+                        <span class="slideshow__num">5</span>
+                    </div>
+                </section>
+            </main>
+
+            <!-- footer -->
             <footer id="footer" class="footer"></footer>
             <script async>
                 loadComponent('#footer', './templates/footer.html');

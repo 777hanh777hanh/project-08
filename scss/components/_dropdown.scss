@@ -9,7 +9,7 @@
     transition: 0.15s linear;
     transition-property: visibility;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         display: none;
         position: initial;
         padding-top: 0;
@@ -33,7 +33,7 @@
             filter: var(--dropdown-arrow-color);
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             --inner-padding: 40px;
             padding: 0 var(--inner-padding);
             border-radius: 0;
@@ -45,7 +45,7 @@
             }
         }
 
-        @include abstracts.breakpoint(sm) {
+        @include abstracts.screen(sm) {
             --inner-padding: 20px;
         }
     }
@@ -63,7 +63,7 @@
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             width: 100%;
             height: auto;
             border-right: none;
@@ -83,7 +83,7 @@
         margin-top: 30px;
     }
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         & {
             margin-top: 20px;
         }
@@ -100,11 +100,11 @@
         width: 36px;
         height: 36px;
 
-        @include abstracts.breakpoint(xl) {
+        @include abstracts.screen(xl) {
             display: none;
         }
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
         }
     }
@@ -135,7 +135,7 @@
         line-height: 150%;
         padding: 6px 0;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-bottom: 20px;
         }
     }
@@ -143,7 +143,7 @@
     &__list {
         margin-top: 13px;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }
@@ -170,7 +170,7 @@
         font-size: 1.4rem;
         line-height: 142.857%;
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             color: var(--navbar-text-color);
         }
     }
@@ -185,7 +185,7 @@
     padding-left: var(--inner-padding);
     overflow-y: auto;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: initial;
         grid-template-columns: 1fr;
         padding-left: 0;
@@ -200,7 +200,7 @@
         grid-template-columns: repeat(4, 1fr);
         height: var(--max-inner-height);
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             grid-template-columns: 1fr;
             height: auto;
         }
