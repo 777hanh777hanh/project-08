@@ -87,6 +87,10 @@
         & {
             margin-top: 20px;
         }
+
+        &__heading {
+            color: var(--navbar-text-color);
+        }
     }
 
     &__icon {
@@ -156,7 +160,7 @@
 
     &__item--active > &__link,
     &__item:hover > &__link {
-        color: #0071dc;
+        color: var(--navbar-text-active-color);
         font-weight: 500;
     }
 
@@ -165,6 +169,10 @@
         padding: 7px 0;
         font-size: 1.4rem;
         line-height: 142.857%;
+
+        @include abstracts.breakpoint(lg) {
+            color: var(--navbar-text-color);
+        }
     }
 }
 

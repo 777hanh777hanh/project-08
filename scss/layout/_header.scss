@@ -126,6 +126,10 @@
         }
     }
 
+    &__item--active &__link {
+        color: var(--navbar-text-active-color);
+    }
+
     &__link {
         @extend %flexItemsCenter;
         padding: 0 3rem;
@@ -141,6 +145,7 @@
 
         @include abstracts.breakpoint(lg) {
             height: auto;
+            color: var(--navbar-text-color);
             font-size: 1.6rem;
             padding: 1rem 4rem;
             line-height: 150%;

@@ -133,10 +133,10 @@ function handleActiveMenu() {
                     removeActive(menu);
                     item.classList.add(activeClass);
                 };
-                item.onclick = () => {
+                item.onclick = (e) => {
                     if (window.innerWidth > 991) return;
                     removeActive(menu);
-                    if (currentItem === item) {
+                    if (!e.target.closest('.sub-menu') && currentItem === item) {
                         currentItem.classList.remove(activeClass);
                         currentItem = null;
                     } else {

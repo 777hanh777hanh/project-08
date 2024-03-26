@@ -24,6 +24,10 @@ html {
         hue-rotate(152deg) brightness(103%) contrast(103%);
     --top-menu-border-color: #d2d1d6;
 
+    //navbar
+    --navbar-text-color: var(--text-color);
+    --navbar-text-active-color: #0071dc;
+
     // sidebar
     --sidebar-bg-color: #fff;
     --sidebar-shadow-color: rgba(200, 200, 200, 0.4);
