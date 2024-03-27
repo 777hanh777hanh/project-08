@@ -2,7 +2,6 @@
 
 .slideshow {
     position: relative;
-    margin-top: 40px;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -43,7 +42,7 @@
         position: absolute;
         left: calc(70 / 1340 * 100%);
         bottom: calc(66 / 455 * 100%);
-        width: 100%;
+        right: 0;
 
         @include abstracts.screen(md) {
             column-gap: 26px;
