@@ -26,6 +26,7 @@
         }
 
         @include abstracts.screen(md) {
+            --grid-gutter-x: 24px;
             --grid-gutter-y: 20px;
         }
     }

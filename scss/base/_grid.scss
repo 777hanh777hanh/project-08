@@ -136,7 +136,7 @@ $grid-gutter-width: 24px !default;
             @if ($breakpoint == 'xs' or $breakpoint == 'sm') {
                 max-width: 100%;
             } @else {
-                max-width: $maxWidth + $grid-gutter-width;
+                max-width: $maxWidth;
             }
         }
 
