@@ -1,22 +1,29 @@
 @use 'sass:math';
 
 /* Grid System */
-$grid-breakpoints: (
-    xs: 0,
-    xxl: 1400px,
-    xl: 1200px,
-    lg: 992px,
-    md: 768px,
-    sm: 576px,
+/* Desktop First */
+
+$grid-breakpoints-d: (
+    no-refix: 0,
+    xl: 1400px,
+    lg: 1200px,
+    md: 992px,
+    sm: 768px,
+    xs: 576px,
 ) !default;
-$container-max-widths: (
-    sm: 100%,
-    md: 540px,
-    lg: 720px,
-    xl: 960px,
-    xxl: 1140px,
+
+$container-max-widths-d: (
+    no-refix: 1320px,
+    xl: 1140px,
+    lg: 960px,
+    md: 720px,
+    sm: 540px,
+    xs: 100%,
 ) !default;
-$gutters: (
+$grid-columns-d: 12 !default;
+$grid-row-cols-number-d: $grid-columns-d * 0.5 !default;
+$grid-gutter-width-d: 24px !default;
+$gutters-d: (
     0: 0,
     1: 0.25,
     2: 0.5,
@@ -25,17 +32,14 @@ $gutters: (
     5: 1.5,
     6: 3,
 ) !default;
-
-$grid-columns: 12 !default;
-$grid-row-cols-number: $grid-columns * 0.5 !default;
-$grid-gutter-width: 24px !default;
+$display-value-d: flex, grid, block, inline-block, inline, none;
 %gutter-padding {
     padding-left: calc(var(--grid-gutter-x) * 0.5);
     padding-right: calc(var(--grid-gutter-x) * 0.5);
 }
 
 .container-fluid {
-    --grid-gutter-x: #{$grid-gutter-width};
+    --grid-gutter-x: #{$grid-gutter-width-d};
     --grid-gutter-y: 0;
 
     width: 100%;
@@ -45,11 +49,16 @@ $grid-gutter-width: 24px !default;
 }
 .container {
     @extend .container-fluid;
-    width: 1340px;
 }
 
 .text-center {
     text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
 }
 
 .row {
@@ -70,7 +79,7 @@ $grid-gutter-width: 24px !default;
     flex: 1 0;
 }
 
-@mixin makeMediaQuery($dimension) {
+@mixin makeMediaQuery-d($dimension) {
     @if $dimension == 0 {
         @content;
     } @else {
@@ -80,8 +89,8 @@ $grid-gutter-width: 24px !default;
     }
 }
 
-@mixin makeRowCols($infix: null) {
-    @for $i from 1 through $grid-row-cols-number {
+@mixin makeRowCols-d($infix) {
+    @for $i from 1 through $grid-row-cols-number-d {
         .row-cols#{$infix}-#{$i} > * {
             flex: 0 0 auto;
             width: math.div(100%, $i);
@@ -89,63 +98,115 @@ $grid-gutter-width: 24px !default;
     }
 }
 
-@mixin makeOffset($infix: null) {
-    @for $i from 0 to $grid-columns {
+@mixin makeOffset-d($infix) {
+    @for $i from 0 to $grid-columns-d {
         .offset#{$infix}-#{$i} {
             @if $i == 0 {
                 margin-left: 0;
             } @else {
-                margin-left: math.div(100%, $grid-columns) * $i;
+                margin-left: math.div(100%, $grid-columns-d) * $i;
             }
         }
     }
 }
 
-@mixin makeCols($infix: null) {
-    @for $i from 1 through $grid-columns {
+@mixin makeCols-d($infix) {
+    @for $i from 1 through $grid-columns-d {
         .col#{$infix}-#{$i} {
             flex: 0 0 auto;
-            width: math.div(100%, $grid-columns) * $i;
+            width: math.div(100%, $grid-columns-d) * $i;
         }
     }
 }
 
-@mixin makeGutters($infix: null) {
-    @each $i, $ratio in $gutters {
+@mixin makeGutters-d($infix) {
+    @each $i, $ratio in $gutters-d {
         .g#{$infix}-#{$i} {
-            --grid-gutter-x: #{$grid-gutter-width * $ratio};
-            --grid-gutter-y: #{$grid-gutter-width * $ratio};
+            --grid-gutter-x: #{$grid-gutter-width-d * $ratio};
+            --grid-gutter-y: #{$grid-gutter-width-d * $ratio};
         }
 
         .gx#{$infix}-#{$i} {
-            --grid-gutter-x: #{$grid-gutter-width * $ratio};
+            --grid-gutter-x: #{$grid-gutter-width-d * $ratio};
         }
 
         .gy#{$infix}-#{$i} {
-            --grid-gutter-y: #{$grid-gutter-width * $ratio};
+            --grid-gutter-y: #{$grid-gutter-width-d * $ratio};
         }
     }
 }
 
-@each $breakpoint, $dimension in $grid-breakpoints {
-    $maxWidth: map-get($container-max-widths, $breakpoint);
-    $infix: if($breakpoint == 'xs', '', '-' + $breakpoint);
+@mixin makeDisplay-d($infix) {
+    @each $display in $display-value-d {
+        .d#{$infix}-#{$display} {
+            display: $display !important;
+        }
+    }
+}
 
-    @include makeMediaQuery($dimension) {
-        .container {
-            @if ($breakpoint == 'xs' or $breakpoint == 'sm') {
-                max-width: 100%;
-            } @else {
-                max-width: $maxWidth;
+//Text Alignment
+$text-align: left, center, right, justify;
+@mixin make-text-align($infix) {
+    @each $align in $text-align {
+        .text#{$infix}-#{$align} {
+            text-align: $align !important;
+        }
+    }
+}
+
+// Justify-content
+$justify-content: start, end, center, between, around, evenly;
+@mixin make-justify-content($infix) {
+    @each $justify in $justify-content {
+        @if ($justify == 'start' or $justify == 'end') {
+            .justify-content#{$infix}-#{$justify} {
+                justify-content: flex-#{$justify} !important;
+            }
+        } @else if($justify == 'between' or $justify == 'around' or $justify == 'evenly') {
+            .justify-content#{$infix}-#{$justify} {
+                justify-content: space-#{$justify} !important;
+            }
+        } @else {
+            .justify-content#{$infix}-#{$justify} {
+                justify-content: $justify !important;
             }
         }
+    }
+}
 
-        @include makeRowCols($infix);
+//Align-items
+$align-items: stretch, center, flex-start, flex-end, start, end, baseline;
+@mixin make-align-items($infix) {
+    @each $align in $align-items {
+        .align-items#{$infix}-#{$align} {
+            align-items: $align !important;
+        }
+    }
+}
 
-        @include makeCols($infix);
+@each $breakpoint, $dimension in $grid-breakpoints-d {
+    $maxWidth: map-get($container-max-widths-d, $breakpoint);
+    $infix: if($breakpoint == 'no-refix', '', '-' + $breakpoint);
 
-        @include makeOffset($infix);
+    @include makeMediaQuery-d($dimension) {
+        .container {
+            max-width: $maxWidth;
+        }
 
-        @include makeGutters($infix);
+        @include makeRowCols-d($infix);
+
+        @include makeCols-d($infix);
+
+        @include makeOffset-d($infix);
+
+        @include makeGutters-d($infix);
+
+        @include makeDisplay-d($infix);
+
+        @include make-text-align($infix);
+
+        @include make-justify-content($infix);
+
+        @include make-align-items($infix);
     }
 }

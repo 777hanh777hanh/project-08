@@ -65,7 +65,7 @@
                 <div class="home__row">
                     <h2 class="home__heading">Browse Categories</h2>
                 </div>
-                <div class="home__cate row row-cols-3 row-cols-md-1">
+                <div class="home__cate row row-cols-3 row-cols-sm-1">
                     <!-- Category item 1 -->
                     <div class="col">
                         <a href="#!">
@@ -120,7 +120,7 @@
             </section>
 
             <!-- Browse Products -->
-            <section class="home__container">
+            <section class="home__container d-none">
                 <div class="home__row">
                     <h2 class="home__heading">Total LavAzza 1320</h2>
                     <div class="filter-wrap">
@@ -611,5 +611,8 @@
         <script>
             loadComponent('#footer', './templates/footer.html');
         </script>
+
+        <!-- Toggle Dark Mode -->
+        <button type="button" class="dark-mode js-dark-mode-toggle">Dark</button>
     </body>
 </html>

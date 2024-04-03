@@ -21,7 +21,7 @@
     &__cate {
         --grid-gutter-x: 51px;
 
-        @include abstracts.screen(lg) {
+        @include abstracts.screen(xl) {
             --grid-gutter-x: 40px;
         }
 
