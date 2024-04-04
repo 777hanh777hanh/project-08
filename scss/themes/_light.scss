@@ -39,4 +39,15 @@ html {
     @include abstracts.screen(md) {
         --cate-item-bg-color: #fff;
     }
+
+    // Filter button
+    --filter-btn-color: #6c6c72;
+    --filter-btn-bg-color: #fff;
+
+    // Product card
+    --product-card-bg-color: #fff;
+    --product-card-shadow-color: rgba(237, 237, 246, 0.2);
+
+    // Like button
+    --like-btn-bg-color: #fff;
 }

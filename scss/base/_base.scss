@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 html {
     font-size: 62.5%;
 }
@@ -22,6 +24,10 @@ textarea {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .icon {
@@ -51,5 +57,12 @@ a {
         visibility: visible;
         transition-delay: initial;
         transition-property: opacity, visibility;
+    }
+}
+
+.container {
+    @include abstracts.screen(sm) {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
 }
