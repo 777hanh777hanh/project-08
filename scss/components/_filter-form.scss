@@ -1,0 +1,231 @@
+.filter-wrap {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.filter {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 30px);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    background: var(--filter-form-bg-color);
+    -webkit-filter: drop-shadow(0px 40px 90px var(--filter-form-shadow-color));
+    filter: drop-shadow(0px 40px 90px var(--filter-form-shadow-color));
+
+    &__arrow {
+        position: absolute;
+        bottom: 100%;
+        right: 20px;
+        width: 60.25px;
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__form {
+        margin-top: 30px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    &__row {
+        display: flex;
+        flex-grow: 1;
+        gap: 30px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-group {
+        margin-top: 20px;
+
+        &--inline {
+            display: flex;
+            gap: 30px;
+        }
+    }
+
+    &__form-slider {
+        position: relative;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 2px;
+        background: #d2d1d6;
+
+        &::after,
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 50%;
+            translate: 0 -50%;
+
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 6px solid #ffb700;
+
+            background: var(--filter-form-bg-color);
+        }
+
+        &::before {
+            left: var(--min-value);
+        }
+
+        &::after {
+            left: var(--max-value);
+        }
+    }
+
+    &__form-text-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 16px;
+        height: 44px;
+        width: 334px;
+
+        border: 1px solid #d2d1d6;
+        border-radius: 6px;
+
+        overflow: hidden;
+
+        &--small {
+            padding: 0 12px;
+            width: 121px;
+            height: 36px;
+        }
+    }
+
+    &__form-text-input--small &__form-input {
+        font-size: 1.4rem;
+        line-height: 142.857%;
+    }
+
+    &__form-input {
+        width: 100%;
+
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder,
+        &::-ms-input-placeholder,
+        &::placeholder {
+            font-weight: 400;
+            color: #9e9da8;
+        }
+    }
+
+    &__form-input-icon {
+        margin-left: 12px;
+    }
+
+    &__separate {
+        background: #eee;
+        width: 1px;
+    }
+
+    &__footer {
+        margin-top: 32px;
+    }
+
+    &__cancel,
+    &__submit {
+        height: 38px;
+        padding: 0 10px;
+    }
+
+    &__cancel {
+        margin-left: auto;
+        font-size: 1.5rem;
+    }
+
+    &__submit {
+        font-size: 1.4rem;
+        margin-left: 0;
+    }
+}
+
+.form {
+    &__label {
+        display: block;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        &--small {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            line-height: 142.857%;
+        }
+    }
+
+    &__select-wrap {
+        display: flex;
+        align-items: center;
+        height: 45px;
+
+        border: 1px solid #d2d1d6;
+        border-radius: 6px;
+    }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 14px;
+        min-width: var(--width, 108px);
+        height: calc(100% - 10px);
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+
+        cursor: pointer;
+
+        & + & {
+            border-left: 1px solid #d2d1d6;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    &__tag {
+        padding: 6px 12px;
+
+        border-radius: 6px;
+        background: var(--form-tag-bg-color);
+        color: #9e9da8;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+
+        transition: color 0.25s linear;
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+}

@@ -1,5 +1,10 @@
 @use '../abstracts';
 
+* {
+    transition: 0.2s linear;
+    transition-property: box-shadow, background;
+}
+
 html {
     font-size: 62.5%;
 }

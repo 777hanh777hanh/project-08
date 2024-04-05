@@ -13,7 +13,7 @@
         flex-direction: column;
     }
 
-    @include abstracts.screen(md) {
+    @include abstracts.screen(sm) {
         flex-direction: row;
     }
 
@@ -29,7 +29,7 @@
             width: 100%;
         }
 
-        @include abstracts.screen(md) {
+        @include abstracts.screen(sm) {
             width: 88px;
             height: 88px;
         }
