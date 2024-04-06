@@ -51,4 +51,13 @@ html.dark {
 
     // Like button
     --like-btn-bg-color: #292e39;
+
+    // Filter form
+    --filter-form-bg-color: #2f3441;
+    --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
+    --filter-form-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(356%)
+        hue-rotate(184deg) brightness(96%) contrast(87%);
+
+    // Form
+    --form-tag-bg-color: #171c28;
 }

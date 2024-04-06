@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 .filter-wrap {
     height: 100%;
     position: relative;
@@ -9,18 +11,39 @@
     right: 0;
     top: calc(100% + 30px);
 
-    padding: 30px;
+    padding: 30px 0;
     border-radius: 20px;
 
     background: var(--filter-form-bg-color);
     -webkit-filter: drop-shadow(0px 40px 90px var(--filter-form-shadow-color));
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow-color));
 
+    transition: 0.2s linear;
+    transition-property: opacity, visibility;
+
+    @include abstracts.screen(md) {
+        width: 65dvw;
+    }
+
+    @include abstracts.screen(sm) {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        overscroll-behavior: none;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     &__arrow {
         position: absolute;
         bottom: 100%;
         right: 20px;
         width: 60.25px;
+        filter: var(--filter-form-arrow-color);
     }
 
     &__heading {
@@ -52,7 +75,8 @@
         margin-top: 20px;
 
         &--inline {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
     }
@@ -107,6 +131,12 @@
             padding: 0 12px;
             width: 121px;
             height: 36px;
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+        }
+        @include abstracts.screen(sm) {
+            width: 100%;
         }
     }
 
@@ -121,6 +151,7 @@
         font-weight: 500;
         font-size: 1.5rem;
         line-height: 146.667%;
+        color: var(--text-color);
 
         &::-webkit-input-placeholder,
         &::-moz-placeholder,
@@ -129,6 +160,10 @@
         &::placeholder {
             font-weight: 400;
             color: #9e9da8;
+        }
+
+        @include abstracts.screen(sm) {
+            font-size: 1.6rem;
         }
     }
 
@@ -139,16 +174,31 @@
     &__separate {
         background: #eee;
         width: 1px;
+
+        @include abstracts.screen(lg) {
+            height: 1px;
+            width: initial;
+        }
     }
 
     &__footer {
         margin-top: 32px;
+        position: sticky;
+        bottom: 30px;
+
+        @supports (height: 100dvh) {
+            position: initial;
+        }
     }
 
     &__cancel,
     &__submit {
         height: 38px;
-        padding: 0 10px;
+
+        @include abstracts.screen(sm) {
+            flex: 1;
+            height: 42px;
+        }
     }
 
     &__cancel {
@@ -159,6 +209,30 @@
     &__submit {
         font-size: 1.4rem;
         margin-left: 0;
+    }
+
+    &__content {
+        max-height: calc(50dvh);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(sm) {
+            max-height: initial;
+            height: calc(100vh - 220px);
+            @supports (height: 100dvh) {
+                height: calc(100dvh - 210px);
+            }
+        }
+    }
+
+    &__heading,
+    &__content,
+    &__footer {
+        padding: 0 30px;
     }
 }
 
@@ -200,6 +274,15 @@
 
         cursor: pointer;
 
+        @include abstracts.screen(xl) {
+            flex: 1;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 100%;
+            min-width: initial;
+        }
+
         & + & {
             border-left: 1px solid #d2d1d6;
         }
@@ -209,6 +292,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 10px 20px;
+
+        @include abstracts.screen(sm) {
+            gap: 10px;
+        }
     }
 
     &__tag {

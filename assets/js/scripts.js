@@ -203,7 +203,9 @@ function initJsToggle() {
         if (!target) {
             document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
         }
-        button.onclick = () => {
+        button.onclick = (e) => {
+            e.preventDefault();
+
             if (!$(target)) {
                 return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
             }
@@ -213,6 +215,18 @@ function initJsToggle() {
                 $(target).classList.toggle('hide', !isHidden);
                 $(target).classList.toggle('show', isHidden);
             });
+        };
+        // Ẩn box khi click ra ngoài
+        document.onclick = function (e) {
+            // Nếu click vào phần tử không thuộc target
+            if (!e.target.closest(target)) {
+                // Kiểm tra xem target có đang hiển thị không
+                const isHidden = $(target).classList.contains('hide');
+                // Nếu đang hiển thị thì ẩn đi
+                if (!isHidden) {
+                    button.click();
+                }
+            }
         };
     });
 }
