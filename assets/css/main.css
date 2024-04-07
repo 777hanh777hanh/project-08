@@ -2241,16 +2241,22 @@ html {
   .footer__socials {
     margin-top: 30px;
     gap: 30px;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     flex: 1;
   }
 }
 .footer__social-link {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 20px;
   height: 20px;
+}
+@media (max-width: 991.98px) {
+  .footer__social-link {
+    width: 26px;
+    height: 26px;
+  }
 }
 .footer__social-link--facebook:hover {
   filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(1259%) hue-rotate(202deg) brightness(102%) contrast(93%);
