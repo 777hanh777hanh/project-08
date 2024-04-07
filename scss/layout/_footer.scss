@@ -135,6 +135,10 @@
             align-items: center;
             flex: 1;
         }
+
+        @include abstracts.screen(sm) {
+            justify-content: center;
+        }
     }
 
     &__social-link {
