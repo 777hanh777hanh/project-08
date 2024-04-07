@@ -1,0 +1,186 @@
+@use '../abstracts';
+
+.footer {
+    margin-top: 80px;
+    background: var(--footer-bg-color);
+    border-top-left-radius: 120px;
+
+    &__inner {
+        padding: 40px 0;
+        color: var(--footer-text-color);
+        font-size: 1.4rem;
+    }
+
+    &__container {
+        @include abstracts.screen(lg) {
+            margin-top: 40px;
+        }
+    }
+
+    &__row:last-child {
+        align-items: end;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        height: 100%;
+        padding: 30px 0px;
+
+        @include abstracts.screen(md) {
+            padding: 20px 0;
+        }
+    }
+
+    &__logo {
+        margin-left: 0 !important;
+
+        .logo__img {
+            width: 24px;
+        }
+    }
+
+    &__subscribe-form {
+        display: flex;
+        margin-top: -4px;
+        flex-wrap: nowrap;
+        gap: 14px;
+
+        @include abstracts.screen(xs) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__input {
+        border: 1px solid #b9babe;
+        border-radius: 999px;
+        padding: 0 20px;
+        height: 36px;
+        flex: 1;
+        font-weight: 500;
+
+        &::placeholder {
+            opacity: 0.5;
+            font-weight: 400;
+        }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 6px;
+
+        &.btn {
+            padding: 0 12px;
+            height: 36px;
+            font-size: 1.3rem;
+        }
+
+        &-icon {
+            width: 20px;
+        }
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__link {
+        color: var(--footer-link-color);
+
+        &:hover {
+            color: var(--footer-link-active-color);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 600;
+        user-select: none;
+    }
+
+    &__text + &__text {
+        margin-top: 6px;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 28px;
+        height: 100%;
+        align-items: flex-end;
+
+        @include abstracts.screen(md) {
+            margin-top: 30px;
+            gap: 30px;
+            justify-content: flex-start;
+            align-items: center;
+            flex: 1;
+        }
+    }
+
+    &__social-link {
+        display: flex;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+
+        &--facebook {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(1259%) hue-rotate(202deg)
+                    brightness(102%) contrast(93%);
+            }
+        }
+        &--youtube {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(6275%) hue-rotate(358deg)
+                    brightness(97%) contrast(113%);
+            }
+        }
+        &--tiktok {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(68%) sepia(69%) saturate(1555%) hue-rotate(126deg)
+                    brightness(103%) contrast(103%);
+            }
+        }
+        &--twitter {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(61%) sepia(32%) saturate(6021%) hue-rotate(175deg)
+                    brightness(97%) contrast(96%);
+            }
+        }
+        &--linkedin {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(27%) sepia(58%) saturate(2640%) hue-rotate(179deg)
+                    brightness(98%) contrast(102%);
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: 30px;
+    }
+
+    &__copyright {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}

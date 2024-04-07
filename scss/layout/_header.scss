@@ -16,7 +16,7 @@
 .top-bar {
     @extend %flexItemsCenter;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     padding: 3rem 0;
     @include abstracts.screen(lg) {
         padding: 2.3rem 0;

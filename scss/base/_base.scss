@@ -23,7 +23,32 @@ input,
 [tabindex],
 select,
 textarea {
+    color: inherit;
     -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-animation: autofillAnimation 0s forwards;
+        animation: autofillAnimation 0s forwards;
+    }
+}
+@keyframes autofillAnimation {
+    0%,
+    100% {
+        background: transparent;
+        color: inherit;
+    }
+}
+@-webkit-keyframes autofillAnimation {
+    0%,
+    100% {
+        background: transparent;
+        color: inherit;
+    }
 }
 
 a {
