@@ -1,0 +1,111 @@
+.auth {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    &__intro,
+    &__content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__intro {
+        gap: 49px;
+        background: var(--auth-intro-bg-color);
+
+        &-text {
+            max-width: 412px;
+            text-align: center;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+            color: var(--auth-intro-text-color);
+        }
+    }
+
+    &__content {
+        background: var(--auth-content-bg-color);
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 50px 0;
+            width: min(460px, 100%);
+            text-align: center;
+        }
+    }
+
+    &__heading {
+        margin-top: 50px;
+
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--auth-content-heading-color);
+    }
+
+    &__desc {
+        margin-top: 10px;
+        padding: 0 30px;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--auth-text-color);
+    }
+
+    &__form {
+        margin-top: 60px;
+        width: 100%;
+    }
+
+    &__link {
+        color: #0071dc;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+
+        &--large {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__btn-group {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__btn {
+        width: 100%;
+        color: var(--auth-btn-color);
+
+        &--primary {
+            color: #1a162e;
+        }
+
+        &-icon {
+            filter: var(--auth-btn-icon-color);
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 10px;
+        margin-top: 108px;
+    }
+
+    &__text {
+        color: var(--auth-text-color);
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 144.444%;
+    }
+}

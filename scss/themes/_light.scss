@@ -57,9 +57,20 @@ html {
 
     // Form
     --form-tag-bg-color: #f8f8f8;
+    --form-border-color: #d2d1d6;
+    --form-input-placeholder-color: #d2d1d6;
+    --form-checkbox-label-color: #9e9da8;
 
     // Footer
     --footer-bg-color: #eee;
     --footer-text-color: #6c6c72;
     --footer-link-active-color: #333;
+
+    // Auth
+    --auth-intro-bg-color: #fafafd;
+    --auth-content-bg-color: #fff;
+    --auth-text-color: #9e9da8;
+    --auth-btn-color: #1a162e;
+    --auth-btn-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
+        hue-rotate(220deg) brightness(99%) contrast(94%);
 }

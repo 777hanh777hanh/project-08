@@ -236,7 +236,7 @@ window.addEventListener('template-loaded', () => {
 
     links.forEach((link) => {
         link.onclick = () => {
-            if (window.innerWidth > 991) return;
+            if (window.innerWidth > 1199.98) return;
             const item = link.closest('li');
             item.classList.toggle('navbar__item--active');
         };
