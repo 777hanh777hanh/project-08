@@ -204,6 +204,14 @@
         -webkit-tap-highlight-color: transparent;
     }
 
+    &__btn-sign-up.btn {
+        @include abstracts.screen(md) {
+            height: 36px;
+            padding: 0 8px;
+            font-size: 1.5rem;
+        }
+    }
+
     &__title {
         font-size: 1.5rem;
         font-weight: 500;

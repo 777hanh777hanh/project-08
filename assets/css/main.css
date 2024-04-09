@@ -2107,6 +2107,13 @@ html {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
+@media (max-width: 991.98px) {
+  .top-act__btn-sign-up.btn {
+    height: 36px;
+    padding: 0 8px;
+    font-size: 1.5rem;
+  }
+}
 .top-act__title {
   font-size: 1.5rem;
   font-weight: 500;
