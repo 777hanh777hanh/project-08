@@ -1,7 +1,19 @@
+@use '../abstracts';
+
 .auth {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+
+    @include abstracts.screen(sm) {
+        overflow-x: hidden;
+
+        &.show {
+            overflow-x: visible;
+            translate: -100% 0;
+        }
+        transition: translate 0.3s ease-in;
+    }
 
     &__intro,
     &__content {
@@ -10,11 +22,40 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding: 30px;
     }
 
     &__intro {
+        position: relative;
         gap: 49px;
         background: var(--auth-intro-bg-color);
+
+        &-logo,
+        &-next {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &-logo {
+            top: 80px;
+
+            .logo__img {
+                width: 32px;
+            }
+
+            .logo__brand {
+                font-size: 2.2rem;
+            }
+        }
+
+        &-next {
+            bottom: 50px;
+        }
+
+        &-img {
+            max-width: 100%;
+        }
 
         &-text {
             max-width: 412px;
@@ -24,20 +65,38 @@
             font-weight: 500;
             line-height: 144.444%;
             color: var(--auth-intro-text-color);
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
         }
     }
 
     &__content {
         background: var(--auth-content-bg-color);
 
+        @include abstracts.screen(sm) {
+            position: fixed;
+            inset: 0;
+
+            translate: 100% 0;
+            overflow-y: auto;
+            z-index: 1;
+        }
+
         &-inner {
             display: flex;
             flex-direction: column;
             align-items: center;
 
+            margin: 0 auto;
             padding: 50px 0;
             width: min(460px, 100%);
             text-align: center;
+
+            @include abstracts.screen(md) {
+                padding: 30px 0;
+            }
         }
     }
 
@@ -48,6 +107,10 @@
         font-weight: 500;
         line-height: 146.667%;
         color: var(--auth-content-heading-color);
+
+        @include abstracts.screen(md) {
+            font-size: 2.5rem;
+        }
     }
 
     &__desc {
@@ -58,11 +121,19 @@
         font-weight: 500;
         line-height: 146.667%;
         color: var(--auth-text-color);
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__form {
         margin-top: 60px;
         width: 100%;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+        }
     }
 
     &__link {
@@ -71,8 +142,16 @@
         font-weight: 500;
         line-height: 146.667%;
 
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
+
         &--large {
             font-size: 1.8rem;
+
+            @include abstracts.screen(md) {
+                font-size: 1.6rem;
+            }
         }
     }
 
@@ -81,11 +160,19 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+        }
     }
 
     &__btn {
         width: 100%;
         color: var(--auth-btn-color);
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
 
         &--primary {
             color: #1a162e;
@@ -100,6 +187,10 @@
         display: flex;
         gap: 10px;
         margin-top: 108px;
+
+        @include abstracts.screen(md) {
+            margin-top: 90px;
+        }
     }
 
     &__text {
@@ -107,5 +198,9 @@
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 }
