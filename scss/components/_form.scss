@@ -1,6 +1,8 @@
 @use '../abstracts';
 
 .form {
+    $error-clr: #cc3300;
+
     &__group {
         margin-top: 30px;
 
@@ -11,6 +13,27 @@
         &--inline {
             display: flex;
             align-items: center;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: rgba($color: $error-clr, $alpha: 1);
+            background: rgba($color: $error-clr, $alpha: 0.05);
+        }
+
+        .form__input-icon {
+            display: none;
+
+            &--error {
+                display: block;
+
+                animation: shake 0.4s ease-in;
+            }
+        }
+
+        .form__error {
+            display: block;
         }
     }
 
@@ -54,6 +77,26 @@
         }
     }
 
+    &__input-icon {
+        width: 24px;
+        height: 24px;
+        filter: var(--form-icon-color);
+
+        &--error {
+            display: none;
+        }
+    }
+
+    &__error {
+        display: none;
+        margin-top: 10px;
+
+        text-align: left;
+        font-size: 1.2rem;
+        color: $error-clr;
+        font-weight: 500;
+    }
+
     &__checkbox {
         display: flex;
         align-items: flex-end;
@@ -64,11 +107,24 @@
         display: none;
 
         &:checked + .form__checkbox-label::before {
-            background: #77dae6;
+            background: #ffb700;
+            border-color: #ffb700;
+        }
+
+        &:checked + .form__checkbox-label::after {
+            top: 40%;
+            left: 4px;
+            width: 15px;
+            height: 7px;
+            border: 2px solid #fff;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-60deg) skew(-40deg) translate(0, -50%);
         }
     }
 
     &__checkbox-label {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -88,10 +144,15 @@
             content: '';
             display: block;
 
-            width: 18.5px;
-            height: 18.5px;
+            width: 20px;
+            height: 20px;
             border: 2px solid currentColor;
             border-radius: 5px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
         }
     }
 

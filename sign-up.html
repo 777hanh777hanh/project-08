@@ -64,9 +64,17 @@
                                     id="email"
                                     class="form__input"
                                     placeholder="Email"
+                                    required
+                                    autocomplete="on"
                                 />
                                 <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                                <img
+                                    src="./assets/icons/warning.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon--error"
+                                />
                             </div>
+                            <p class="form__error">Email is not valid</p>
                         </div>
                         <!-- Password -->
                         <div class="form__group">
@@ -77,9 +85,18 @@
                                     id="password"
                                     class="form__input"
                                     placeholder="Password"
+                                    required
+                                    minlength="6"
+                                    autocomplete="off"
                                 />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img
+                                    src="./assets/icons/warning.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon--error"
+                                />
                             </div>
+                            <p class="form__error">Password must be at least 6 characters long</p>
                         </div>
                         <!-- Confirm Password -->
                         <div class="form__group">
@@ -90,9 +107,18 @@
                                     id="confirm-password"
                                     class="form__input"
                                     placeholder="Confirm Password"
+                                    required
+                                    minlength="6"
+                                    autocomplete="off"
                                 />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img
+                                    src="./assets/icons/warning.svg"
+                                    alt=""
+                                    class="form__input-icon form__input-icon--error"
+                                />
                             </div>
+                            <p class="form__error">Passwords do not match</p>
                         </div>
                         <!-- Action -->
                         <div class="form__group form__group--inline">
@@ -118,7 +144,7 @@
                                     alt=""
                                     class="btn__icon icon auth__btn-icon"
                                 />
-                                Sign in with Gmail
+                                Sign in with Google
                             </button>
                         </div>
                     </form>

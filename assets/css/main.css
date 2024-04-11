@@ -21,6 +21,7 @@ button,
 input,
 [tabindex],
 select,
+label,
 textarea {
   color: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -1800,6 +1801,17 @@ button {
     display: none !important;
   }
 }
+@keyframes shake {
+  0%, 100% {
+    translate: 0;
+  }
+  25%, 75% {
+    translate: 3px;
+  }
+  50% {
+    translate: -3px;
+  }
+}
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%) hue-rotate(61deg)
@@ -3096,6 +3108,20 @@ html {
   display: flex;
   align-items: center;
 }
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: #cc3300;
+  background: rgba(204, 51, 0, 0.05);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon--error {
+  display: block;
+  animation: shake 0.4s ease-in;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error {
+  display: block;
+}
 .form__text-input {
   display: flex;
   align-items: center;
@@ -3131,6 +3157,22 @@ html {
   user-select: none;
   color: var(--form-input-placeholder-color);
 }
+.form__input-icon {
+  width: 24px;
+  height: 24px;
+  filter: var(--form-icon-color);
+}
+.form__input-icon--error {
+  display: none;
+}
+.form__error {
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #cc3300;
+  font-weight: 500;
+}
 .form__checkbox {
   display: flex;
   align-items: flex-end;
@@ -3140,9 +3182,21 @@ html {
   display: none;
 }
 .form__checkbox-input:checked + .form__checkbox-label::before {
-  background: #77dae6;
+  background: #ffb700;
+  border-color: #ffb700;
+}
+.form__checkbox-input:checked + .form__checkbox-label::after {
+  top: 40%;
+  left: 4px;
+  width: 15px;
+  height: 7px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-60deg) skew(-40deg) translate(0, -50%);
 }
 .form__checkbox-label {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -3160,10 +3214,14 @@ html {
 .form__checkbox-label::before {
   content: "";
   display: block;
-  width: 18.5px;
-  height: 18.5px;
+  width: 20px;
+  height: 20px;
   border: 2px solid currentColor;
   border-radius: 5px;
+}
+.form__checkbox-label::after {
+  content: "";
+  position: absolute;
 }
 .form__pull-right {
   margin-left: auto;
@@ -3212,6 +3270,7 @@ html {
 
 .auth {
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   justify-content: center;
 }
