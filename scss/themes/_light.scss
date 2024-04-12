@@ -68,8 +68,12 @@ html {
 
     // Auth
     --auth-intro-bg-color: #fafafd;
+    @include abstracts.screen(sm) {
+        --auth-intro-bg-color: #fff;
+    }
     --auth-content-bg-color: #fff;
     --auth-text-color: #9e9da8;
+    --auth-desc-color: #9e9da8;
     --auth-btn-color: #1a162e;
     --auth-btn-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
         hue-rotate(220deg) brightness(99%) contrast(94%);
