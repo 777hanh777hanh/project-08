@@ -77,4 +77,11 @@ html {
     --auth-btn-color: #1a162e;
     --auth-btn-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
         hue-rotate(220deg) brightness(99%) contrast(94%);
+
+    // Product detail
+    --product-detail-bg-color: #fff;
+
+    // Breadcrumbs
+    --breadcrumbs-bg-color: #f6f6f6;
+    --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
 }

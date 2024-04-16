@@ -80,4 +80,11 @@ html.dark {
     --auth-btn-color: #b9babe;
     --auth-btn-icon-color: brightness(0) saturate(100%) invert(91%) sepia(9%) saturate(94%) hue-rotate(190deg)
         brightness(85%) contrast(82%);
+
+    // Product detail
+    --product-detail-bg-color: #292e39;
+
+    // Breadcrumbs
+    --breadcrumbs-bg-color: #171c28;
+    --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
 }
