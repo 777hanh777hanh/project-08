@@ -56,6 +56,7 @@ html {
     --filter-form-shadow-color: rgba(200, 200, 200, 0.4);
 
     // Form
+    --form-bg-color: #fff;
     --form-tag-bg-color: #f8f8f8;
     --form-border-color: #d2d1d6;
     --form-input-placeholder-color: #d2d1d6;
@@ -80,6 +81,9 @@ html {
 
     // Product detail
     --product-detail-bg-color: #fff;
+    --product-info-bg-color: #f6f6f6;
+    --product-form-tag-bg-color: #ededf6;
+    --product-card-text-color: #000;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;

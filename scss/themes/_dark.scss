@@ -59,6 +59,7 @@ html.dark {
         hue-rotate(184deg) brightness(96%) contrast(87%);
 
     // Form
+    --form-bg-color: #2f3441;
     --form-tag-bg-color: #171c28;
     --form-border-color: #b9babe;
     --form-input-placeholder-color: #b9babe;
@@ -83,6 +84,10 @@ html.dark {
 
     // Product detail
     --product-detail-bg-color: #292e39;
+    --product-info-bg-color: #171c28;
+    --product-info-color: #eee;
+    --product-card-text-color: #eee;
+    --product-form-tag-bg-color: #292e39;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #171c28;
