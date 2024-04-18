@@ -85,7 +85,20 @@ html {
     --product-form-tag-bg-color: #ededf6;
     --product-card-text-color: #000;
 
+    @include abstracts.screen(sm) {
+        --product-detail-bg-color: #fafafd;
+        --product-info-bg-color: #fff;
+    }
+
     // Breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;
     --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+
+    @include abstracts.screen(sm) {
+        --breadcrumbs-bg-color: #fff;
+    }
+
+    // Search bar
+    --search-bar-bg-color: #fff;
+    --search-bar-text-color: #9e9da8;
 }

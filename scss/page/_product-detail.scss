@@ -1,21 +1,52 @@
+@use '../abstracts';
+
 .product-page {
     min-height: 80vh;
     display: flex;
     flex-direction: column;
 
+    padding-bottom: 80px;
     background: var(--product-detail-bg-color);
+
+    @include abstracts.screen(md) {
+        padding-bottom: 50px;
+    }
+    @include abstracts.screen(sm) {
+        padding-bottom: 30px;
+    }
 }
 
 .product-container {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
+
+    &-info {
+        @include abstracts.screen(md) {
+            background: var(--product-info-bg-color);
+            border-radius: 20px;
+        }
+    }
 }
 
 .product-preview {
     padding: 0 30px;
 
+    @include abstracts.screen(md) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    @include abstracts.screen(sm) {
+        padding: 16px;
+    }
+
     &__list {
         display: flex;
         overflow-x: hidden;
+
+        @include abstracts.screen(md) {
+            flex: 1;
+        }
     }
 
     &__item {
@@ -43,6 +74,15 @@
 
         padding: 30px;
         width: 100%;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            width: auto;
+            padding-left: 0;
+        }
+        @include abstracts.screen(sm) {
+            display: none;
+        }
     }
 
     &__thumb-img {
@@ -54,11 +94,10 @@
         border-radius: 8px;
         opacity: 0.8;
 
-        cursor: pointer;
-
         &:not(&--current):hover {
             opacity: 1;
             border-color: #9e9da8;
+            cursor: pointer;
         }
 
         &--current {
@@ -81,8 +120,19 @@
 .product-info {
     padding: 60px;
     flex: 1;
+
+    border-radius: 10px;
     background: var(--product-info-bg-color);
     color: var(--product-info-color);
+
+    @include abstracts.screen(xl) {
+        padding: 40px;
+    }
+    @include abstracts.screen(sm) {
+        padding: 16px;
+        padding-top: 0;
+        border-radius: 20px;
+    }
 
     &__heading {
         font-size: 2.6rem;
@@ -92,6 +142,10 @@
 
     &__label {
         margin-top: 30px;
+
+        @include abstracts.screen(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__card {
@@ -149,6 +203,13 @@
 
 .product-props {
     padding-left: 30px;
+
+    @include abstracts.screen(xl) {
+        padding-left: 10px;
+    }
+    @include abstracts.screen(md) {
+        padding-left: 0px;
+    }
 }
 
 .product-prop {

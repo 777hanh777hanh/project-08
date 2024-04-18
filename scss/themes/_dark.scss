@@ -92,4 +92,10 @@ html.dark {
     // Breadcrumbs
     --breadcrumbs-bg-color: #171c28;
     --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
+
+    // Search bar
+    --search-bar-bg-color: #171c28;
+    --search-bar-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+        hue-rotate(191deg) brightness(93%) contrast(83%);
+    --search-bar-text-color: #b9babe;
 }

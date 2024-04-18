@@ -1,8 +1,13 @@
 @use '../abstracts';
 
 .home {
+    margin-bottom: 80px;
     @include abstracts.screen(md) {
         --grid-gutter-x: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        margin-bottom: 50px;
     }
 
     &__container {
