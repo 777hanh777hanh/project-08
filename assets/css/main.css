@@ -1873,6 +1873,7 @@ html.dark {
   --search-bar-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
       hue-rotate(191deg) brightness(93%) contrast(83%);
   --search-bar-text-color: #b9babe;
+  --preview-card-bg-color: #171c28;
 }
 @media (max-width: 1199.98px) {
   html.dark {
@@ -1937,6 +1938,7 @@ html {
   --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
   --search-bar-bg-color: #fff;
   --search-bar-text-color: #9e9da8;
+  --preview-card-bg-color: #fafafd;
 }
 @media (max-width: 1199.98px) {
   html {
@@ -3367,6 +3369,46 @@ html {
   filter: var(--search-bar-icon-color);
 }
 
+.review-card {
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--preview-card-bg-color);
+}
+.review-card__content {
+  display: flex;
+  gap: 20px;
+}
+.review-card__avatar {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.review-card__title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.review-card__desc {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.review-card__rating {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.review-card__rating-title {
+  margin-left: 12px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+
 .home {
   margin-bottom: 80px;
 }
@@ -3883,6 +3925,38 @@ html {
   margin-top: 4px;
   font-size: 1.4rem;
   line-height: 142.857%;
+}
+
+.product-tab__list {
+  display: flex;
+  align-items: center;
+  margin: 0 -30px;
+}
+.product-tab__item {
+  padding: 0 30px;
+  color: #9e9da8;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 145.455%;
+}
+.product-tab__item--current {
+  color: inherit;
+}
+.product-tab__contents {
+  padding-top: 30px;
+}
+.product-tab__content {
+  display: none;
+}
+.product-tab__content--current {
+  display: block;
+}
+
+.product-content__heading {
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
 }
 
 /*# sourceMappingURL=main.css.map */
