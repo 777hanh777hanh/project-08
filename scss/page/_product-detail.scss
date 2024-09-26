@@ -1,281 +1,319 @@
 @use '../abstracts';
 
 .product-page {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
 
-    padding-bottom: 80px;
-    background: var(--product-detail-bg-color);
+	padding-bottom: 80px;
+	background: var(--product-detail-bg-color);
 
-    @include abstracts.screen(md) {
-        padding-bottom: 50px;
-    }
-    @include abstracts.screen(sm) {
-        padding-bottom: 30px;
-    }
+	@include abstracts.screen(md) {
+		padding-bottom: 50px;
+	}
+	@include abstracts.screen(sm) {
+		padding-bottom: 30px;
+	}
 }
 
 .product-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
 
-    &-info {
-        @include abstracts.screen(md) {
-            background: var(--product-info-bg-color);
-            border-radius: 20px;
-        }
-    }
+	&-info {
+		@include abstracts.screen(md) {
+			background: var(--product-info-bg-color);
+			border-radius: 20px;
+		}
+	}
 }
 
 .product-preview {
-    padding: 0 30px;
+	padding: 0 30px;
 
-    @include abstracts.screen(md) {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    @include abstracts.screen(sm) {
-        padding: 16px;
-    }
+	@include abstracts.screen(md) {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	@include abstracts.screen(sm) {
+		padding: 16px;
+	}
 
-    &__list {
-        display: flex;
-        overflow-x: hidden;
+	&__list {
+		display: flex;
+		overflow-x: hidden;
 
-        @include abstracts.screen(md) {
-            flex: 1;
-        }
-    }
+		@include abstracts.screen(md) {
+			flex: 1;
+		}
+	}
 
-    &__item {
-        position: relative;
-        padding-top: calc(507 / 551 * 100%);
-        width: 100%;
-        flex-shrink: 0;
-    }
+	&__item {
+		position: relative;
+		padding-top: calc(507 / 551 * 100%);
+		width: 100%;
+		flex-shrink: 0;
+	}
 
-    &__img {
-        position: absolute;
-        inset: 0;
+	&__img {
+		position: absolute;
+		inset: 0;
 
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+		display: block;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: contain;
+		object-fit: contain;
+	}
 
-    &__thumbs {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
+	&__thumbs {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 14px;
 
-        padding: 30px;
-        width: 100%;
+		padding: 30px;
+		width: 100%;
 
-        @include abstracts.screen(md) {
-            flex-direction: column;
-            width: auto;
-            padding-left: 0;
-        }
-        @include abstracts.screen(sm) {
-            display: none;
-        }
-    }
+		@include abstracts.screen(md) {
+			flex-direction: column;
+			width: auto;
+			padding-left: 0;
+		}
+		@include abstracts.screen(sm) {
+			display: none;
+		}
+	}
 
-    &__thumb-img {
-        display: block;
-        width: 65px;
+	&__thumb-img {
+		display: block;
+		width: 65px;
 
-        object-fit: contain;
-        border: 1px solid #9e9da84d;
-        border-radius: 8px;
-        opacity: 0.8;
+		-o-object-fit: contain;
 
-        &:not(&--current):hover {
-            opacity: 1;
-            border-color: #9e9da8;
-            cursor: pointer;
-        }
+		object-fit: contain;
+		border: 1px solid #9e9da84d;
+		border-radius: 8px;
+		opacity: 0.8;
 
-        &--current {
-            opacity: 1;
-            border-color: #ffb700;
-        }
-    }
+		&:not(&--current):hover {
+			opacity: 1;
+			border-color: #9e9da8;
+			cursor: pointer;
+		}
+
+		&--current {
+			opacity: 1;
+			border-color: #ffb700;
+		}
+	}
 }
 
 .product__form {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 
-    &-tag {
-        background: var(--product-form-tag-bg-color);
-    }
+	&-tag {
+		background: var(--product-form-tag-bg-color);
+	}
 }
 
 .product-info {
-    padding: 60px;
-    flex: 1;
+	padding: 60px;
+	flex: 1;
 
-    border-radius: 10px;
-    background: var(--product-info-bg-color);
-    color: var(--product-info-color);
+	border-radius: 10px;
+	background: var(--product-info-bg-color);
+	color: var(--product-info-color);
 
-    @include abstracts.screen(xl) {
-        padding: 40px;
-    }
-    @include abstracts.screen(sm) {
-        padding: 16px;
-        padding-top: 0;
-        border-radius: 20px;
-    }
+	@include abstracts.screen(xl) {
+		padding: 40px;
+	}
+	@include abstracts.screen(sm) {
+		padding: 16px;
+		padding-top: 0;
+		border-radius: 20px;
+	}
 
-    &__heading {
-        font-size: 2.6rem;
-        font-weight: 500;
-        line-height: 138.462%;
-    }
+	&__heading {
+		font-size: 2.6rem;
+		font-weight: 500;
+		line-height: 138.462%;
+	}
 
-    &__label {
-        margin-top: 30px;
+	&__label {
+		margin-top: 30px;
 
-        @include abstracts.screen(sm) {
-            margin-top: 20px;
-        }
-    }
+		@include abstracts.screen(sm) {
+			margin-top: 20px;
+		}
+	}
 
-    &__card {
-        margin-top: 30px;
-        padding: 20px;
-        border-radius: 6px;
-        border: 1px solid #b9babe;
-    }
+	&__card {
+		margin-top: 30px;
+		padding: 20px;
+		border-radius: 6px;
+		border: 1px solid #b9babe;
+	}
 
-    &__row {
-        display: flex;
-        align-items: center;
-    }
+	&__row {
+		display: flex;
+		align-items: center;
+	}
 
-    &__price {
-        margin-right: 10px;
-        color: var(--product-card-text-color);
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 150%;
-    }
+	&__price {
+		margin-right: 10px;
+		color: var(--product-card-text-color);
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 150%;
+	}
 
-    &__tax {
-        padding: 2px 8px;
-        color: #67b044;
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 142.857%;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
-    }
+	&__tax {
+		padding: 2px 8px;
+		color: #67b044;
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 142.857%;
+		background: linear-gradient(
+				0deg,
+				rgba(255, 255, 255, 0.8) 0%,
+				rgba(255, 255, 255, 0.8) 100%
+			),
+			#67b044;
+	}
 
-    &__total-price {
-        margin-top: 20px;
-        margin-bottom: 20px;
+	&__total-price {
+		margin-top: 20px;
+		margin-bottom: 20px;
 
-        color: var(--product-card-text-color);
-        font-size: 2.6rem;
-        font-weight: 500;
-        line-height: 138.462%;
-    }
+		color: var(--product-card-text-color);
+		font-size: 2.6rem;
+		font-weight: 500;
+		line-height: 138.462%;
+	}
 
-    &__add-to-cart {
-        flex: 1;
-    }
+	&__add-to-cart {
+		flex: 1;
+	}
 
-    &__like-btn {
-        margin-left: 20px;
-        width: 46px;
-        height: 46px;
-        border-radius: 6px;
-        border: 1px solid #d2d1d6;
-        background: transparent;
-    }
+	&__like-btn {
+		margin-left: 20px;
+		width: 46px;
+		height: 46px;
+		border-radius: 6px;
+		border: 1px solid #d2d1d6;
+		background: transparent;
+	}
 }
 
 .product-props {
-    padding-left: 30px;
+	padding-left: 30px;
 
-    @include abstracts.screen(xl) {
-        padding-left: 10px;
-    }
-    @include abstracts.screen(md) {
-        padding-left: 0px;
-    }
+	@include abstracts.screen(xl) {
+		padding-left: 10px;
+	}
+	@include abstracts.screen(md) {
+		padding-left: 0px;
+	}
 }
 
 .product-prop {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 30px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-top: 30px;
 
-    &__icon {
-        align-self: flex-start;
-    }
+	&__icon {
+		align-self: flex-start;
+	}
 
-    &__title {
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 144.444%;
-    }
+	&__title {
+		font-size: 1.8rem;
+		font-weight: 500;
+		line-height: 144.444%;
+	}
 
-    &__desc {
-        margin-top: 4px;
+	&__desc {
+		margin-top: 4px;
 
-        font-size: 1.4rem;
-        line-height: 142.857%;
-    }
+		font-size: 1.4rem;
+		line-height: 142.857%;
+	}
 }
 
 .product-tab {
-    &__list {
-        display: flex;
-        align-items: center;
+	&__list {
+		display: flex;
+		align-items: center;
 
-        margin: 0 -30px;
-    }
+		margin: 0 -30px;
 
-    &__item {
-        padding: 0 30px;
+		@include abstracts.screen(sm) {
+			margin: 0 -10px;
+		}
 
-        color: #9e9da8;
-        font-size: 2.2rem;
-        font-weight: 500;
-        line-height: 145.455%;
+		@include abstracts.screen(md) {
+			flex-wrap: wrap;
+		}
+	}
 
-        &--current {
-            color: inherit;
-        }
-    }
+	&__item {
+		padding: 0 30px;
 
-    &__contents {
-        padding-top: 30px;
-    }
+		color: #9e9da8;
+		font-size: 2.2rem;
+		font-weight: 500;
+		line-height: 145.455%;
+		white-space: nowrap;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 
-    &__content {
-        display: none;
+		@include abstracts.screen(md) {
+			padding: 8px 30px;
+			font-size: 1.8rem;
+		}
 
-        &--current {
-            display: block;
-        }
-    }
+		@include abstracts.screen(sm) {
+			margin: 8 10px;
+		}
+
+		&:not(&--current):hover {
+			cursor: pointer;
+		}
+
+		&--current {
+			color: inherit;
+		}
+	}
+
+	&__contents {
+		padding-top: 30px;
+	}
+
+	&__content {
+		display: none;
+
+		&--current {
+			display: block;
+		}
+	}
+
+	&__text-content {
+		margin-top: -20px;
+	}
 }
 
 .product-content {
-    &__heading {
-        margin-bottom: 30px;
+	&__heading {
+		margin-bottom: 30px;
 
-        font-size: 2.4rem;
-        font-weight: 700;
-        line-height: 141.667%;
-    }
+		font-size: 2.2rem;
+		font-weight: 600;
+		line-height: 141.667%;
+	}
 }

@@ -1,104 +1,107 @@
 @use '../abstracts';
 
 html.dark {
-    --text-color: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%) hue-rotate(61deg)
-        brightness(107%) contrast(107%);
+	--text-color: #fff;
+	--icon-color: brightness(0) saturate(100%) invert(93%) sepia(0%) saturate(7500%)
+		hue-rotate(61deg) brightness(107%) contrast(107%);
 
-    --header-bg-color: #171c28;
-    --body-bg-color: #292e39;
-    --top-act-group-bg-color: #292e39;
-    --top-act-group-shadow-color: rgba(0, 0, 0, 0.2);
-    --top-act-group-separate-color: #ededf6;
+	--header-bg-color: #171c28;
+	--body-bg-color: #292e39;
+	--top-act-group-bg-color: #292e39;
+	--top-act-group-shadow-color: rgba(0, 0, 0, 0.2);
+	--top-act-group-separate-color: #ededf6;
 
-    @include abstracts.screen(lg) {
-        --header-shadow-color: rgba(0, 0, 0, 0.2);
-    }
+	@include abstracts.screen(lg) {
+		--header-shadow-color: rgba(0, 0, 0, 0.2);
+	}
 
-    // Dropdown component
-    --dropdown-bg-color: #2f3441;
-    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-    --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(356%)
-        hue-rotate(184deg) brightness(96%) contrast(87%);
+	// Dropdown component
+	--dropdown-bg-color: #2f3441;
+	--dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+	--dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(356%)
+		hue-rotate(184deg) brightness(96%) contrast(87%);
 
-    --top-menu-border-color: #d2d1d6;
-    --menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(20%) saturate(296%)
-        hue-rotate(206deg) brightness(99%) contrast(97%);
+	--top-menu-border-color: #d2d1d6;
+	--menu-column-icon-color: brightness(0) saturate(100%) invert(99%) sepia(20%) saturate(296%)
+		hue-rotate(206deg) brightness(99%) contrast(97%);
 
-    //navbar
-    --navbar-text-color: #b9babe;
-    --navbar-text-active-color: #0071dc;
-    @include abstracts.screen(lg) {
-        --navbar-text-active-color: #fff;
-    }
+	//navbar
+	--navbar-text-color: #b9babe;
+	--navbar-text-active-color: #0071dc;
+	@include abstracts.screen(lg) {
+		--navbar-text-active-color: #fff;
+	}
 
-    // sidebar
-    --sidebar-bg-color: #292e39;
-    --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
+	// sidebar
+	--sidebar-bg-color: #292e39;
+	--sidebar-shadow-color: rgba(23, 28, 40, 0.4);
 
-    // cate-item
-    --cate-item-bg-color: #171c28;
-    --cate-item-thumb-bg-color: #292e39;
-    --cate-item-title-color: #fff;
+	// cate-item
+	--cate-item-bg-color: #171c28;
+	--cate-item-thumb-bg-color: #292e39;
+	--cate-item-title-color: #fff;
 
-    // Filter button
-    --filter-btn-color: #fff;
-    --filter-btn-bg-color: #171c28;
+	// Filter button
+	--filter-btn-color: #fff;
+	--filter-btn-bg-color: #171c28;
 
-    // Product Card
-    --product-card-bg-color: #171c28;
-    --product-card-shadow-color: rgba(0, 0, 0, 0.2);
+	// Product Card
+	--product-card-bg-color: #171c28;
+	--product-card-shadow-color: rgba(0, 0, 0, 0.2);
 
-    // Like button
-    --like-btn-bg-color: #292e39;
+	// Like button
+	--like-btn-bg-color: #292e39;
 
-    // Filter form
-    --filter-form-bg-color: #2f3441;
-    --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
-    --filter-form-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(356%)
-        hue-rotate(184deg) brightness(96%) contrast(87%);
+	// Filter form
+	--filter-form-bg-color: #2f3441;
+	--filter-form-shadow-color: rgba(0, 0, 0, 0.4);
+	--filter-form-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(356%)
+		hue-rotate(184deg) brightness(96%) contrast(87%);
 
-    // Form
-    --form-bg-color: #2f3441;
-    --form-tag-bg-color: #171c28;
-    --form-border-color: #b9babe;
-    --form-input-placeholder-color: #b9babe;
-    --form-checkbox-label-color: #b9babe;
+	// Form
+	--form-bg-color: #2f3441;
+	--form-tag-bg-color: #171c28;
+	--form-border-color: #b9babe;
+	--form-input-placeholder-color: #b9babe;
+	--form-checkbox-label-color: #b9babe;
 
-    // Footer
-    --footer-bg-color: #171c28;
-    --footer-text-color: #d2d1d6;
-    --footer-link-color: #ccc;
-    --footer-link-active-color: #fff;
+	// Footer
+	--footer-bg-color: #171c28;
+	--footer-text-color: #d2d1d6;
+	--footer-link-color: #ccc;
+	--footer-link-active-color: #fff;
 
-    // Auth
-    --auth-intro-bg-color: #171c28;
-    --auth-intro-text-color: #b9babe;
-    --auth-content-bg-color: #292e39;
-    --auth-content-heading-color: #b9babe;
-    --auth-text-color: #b9babe;
-    --auth-desc-color: #9e9da8;
-    --auth-btn-color: #b9babe;
-    --auth-btn-icon-color: brightness(0) saturate(100%) invert(91%) sepia(9%) saturate(94%) hue-rotate(190deg)
-        brightness(85%) contrast(82%);
+	// Auth
+	--auth-intro-bg-color: #171c28;
+	--auth-intro-text-color: #b9babe;
+	--auth-content-bg-color: #292e39;
+	--auth-content-heading-color: #b9babe;
+	--auth-text-color: #b9babe;
+	--auth-desc-color: #9e9da8;
+	--auth-btn-color: #b9babe;
+	--auth-btn-icon-color: brightness(0) saturate(100%) invert(91%) sepia(9%) saturate(94%)
+		hue-rotate(190deg) brightness(85%) contrast(82%);
 
-    // Product detail
-    --product-detail-bg-color: #292e39;
-    --product-info-bg-color: #171c28;
-    --product-info-color: #eee;
-    --product-card-text-color: #eee;
-    --product-form-tag-bg-color: #292e39;
+	// Product detail
+	--product-detail-bg-color: #292e39;
+	--product-info-bg-color: #171c28;
+	--product-info-color: #eee;
+	--product-card-text-color: #eee;
+	--product-form-tag-bg-color: #292e39;
 
-    // Breadcrumbs
-    --breadcrumbs-bg-color: #171c28;
-    --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
+	// Breadcrumbs
+	--breadcrumbs-bg-color: #171c28;
+	--breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
 
-    // Search bar
-    --search-bar-bg-color: #171c28;
-    --search-bar-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
-        hue-rotate(191deg) brightness(93%) contrast(83%);
-    --search-bar-text-color: #b9babe;
+	// Search bar
+	--search-bar-bg-color: #171c28;
+	--search-bar-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+		hue-rotate(191deg) brightness(93%) contrast(83%);
+	--search-bar-text-color: #b9babe;
 
-    // Preview card
-    --preview-card-bg-color: #171c28;
+	// Preview card
+	--preview-card-bg-color: #171c28;
+
+	// Text content
+	--hr-bg-color: #414141;
 }

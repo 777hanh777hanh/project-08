@@ -1,42 +1,47 @@
 @use '../abstracts';
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    height: 50px;
+	display: flex;
+	align-items: center;
+	height: 50px;
 
-    border-radius: 20px;
-    background: var(--search-bar-bg-color);
+	border-radius: 20px;
+	background: var(--search-bar-bg-color);
 
-    &__input {
-        flex: 1;
-        padding-left: 20px;
-        height: 100%;
+	&__label {
+		width: 100%;
+		height: 100%;
+	}
 
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 142.857%;
-        color: var(--search-bar-text-color);
+	&__input {
+		flex: 1;
+		padding-left: 20px;
+		height: 100%;
 
-        @include abstracts.screen(sm) {
-            font-size: 1.6rem;
-        }
+		font-size: 1.4rem;
+		font-weight: 500;
+		line-height: 142.857%;
+		color: var(--search-bar-text-color);
 
-        &::placeholder {
-            font-weight: 400;
-        }
-    }
+		@include abstracts.screen(sm) {
+			font-size: 1.6rem;
+		}
 
-    &__submit {
-        padding: 0 20px;
-        height: 100%;
+		&::placeholder {
+			font-weight: 400;
+		}
+	}
 
-        @include abstracts.screen(sm) {
-            padding: 15px;
-        }
-    }
+	&__submit {
+		padding: 0 20px;
+		height: 100%;
 
-    &__icon {
-        filter: var(--search-bar-icon-color);
-    }
+		@include abstracts.screen(sm) {
+			padding: 15px;
+		}
+	}
+
+	&__icon {
+		filter: var(--search-bar-icon-color);
+	}
 }
