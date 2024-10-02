@@ -1,259 +1,409 @@
 @use '../abstracts';
 
 %flexItemsCenter {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .header {
-    background: var(--header-bg-color);
+	background: var(--header-bg-color);
 
-    @include abstracts.screen(md) {
-        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
-    }
+	@include abstracts.screen(md) {
+		box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+	}
 }
 
 .top-bar {
-    @extend %flexItemsCenter;
-    position: relative;
-    z-index: 5;
-    padding: 3rem 0;
-    @include abstracts.screen(lg) {
-        padding: 2.3rem 0;
-    }
-    @include abstracts.screen(sm) {
-        padding: 1.6rem 0;
-    }
+	@extend %flexItemsCenter;
+	position: relative;
+	z-index: 5;
+	padding: 3rem 0;
+	@include abstracts.screen(lg) {
+		padding: 2.3rem 0;
+	}
+	@include abstracts.screen(sm) {
+		padding: 1.6rem 0;
+	}
 
-    &__more {
-        cursor: pointer;
-    }
+	&__more {
+		cursor: pointer;
+	}
 }
 
 .navbar {
-    margin-left: 114px;
+	margin-left: 114px;
 
-    @include abstracts.screen(xl) {
-        margin-left: auto;
-    }
+	@include abstracts.screen(xl) {
+		margin-left: auto;
+	}
 
-    @include abstracts.screen(lg) {
-        position: fixed;
-        inset: 0 36% 0 0;
-        padding: 20px 0;
-        border-radius: 0 20px 20px 0;
-        background-color: var(--sidebar-bg-color);
-        translate: -100%;
-        z-index: 9;
+	@include abstracts.screen(lg) {
+		position: fixed;
+		inset: 0 36% 0 0;
+		padding: 20px 0;
+		border-radius: 0 20px 20px 0;
+		background-color: var(--sidebar-bg-color);
+		translate: -100%;
+		z-index: 9;
 
-        transition: 0.5s ease-in;
-        transition-property: box-shadow, translate, opacity;
+		transition: 0.5s ease-in;
+		transition-property: box-shadow, translate, opacity;
 
-        &.show {
-            translate: 0;
-            box-shadow: 0px 40px 90px 20px var(--sidebar-shadow-color);
-        }
+		&.show {
+			translate: 0;
+			box-shadow: 0px 40px 90px 20px var(--sidebar-shadow-color);
+		}
 
-        &.show ~ &__overlay {
-            visibility: visible;
-            opacity: 1;
-        }
+		&.show ~ &__overlay {
+			visibility: visible;
+			opacity: 1;
+		}
 
-        &__item--active &__link {
-            color: var(--navbar-text-active-color);
-        }
-    }
-    @include abstracts.screen(sm) {
-        inset: 0 24% 0 0;
-    }
+		&__item--active &__link {
+			color: var(--navbar-text-active-color);
+		}
+	}
+	@include abstracts.screen(sm) {
+		inset: 0 24% 0 0;
+	}
 
-    &__overlay {
-        visibility: hidden;
-        opacity: 0;
-        transition: 0.5s ease-in-out;
-        transition-property: opacity, visibility;
+	&__overlay {
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.5s ease-in-out;
+		transition-property: opacity, visibility;
 
-        @include abstracts.screen(lg) {
-            position: fixed;
-            inset: 0;
-            background: rgba($color: #000, $alpha: 0.4);
-            z-index: 8;
-        }
-    }
+		@include abstracts.screen(lg) {
+			position: fixed;
+			inset: 0;
+			background: rgba($color: #000, $alpha: 0.4);
+			z-index: 8;
+		}
+	}
 
-    &__close-btn {
-        @include abstracts.screen(lg) {
-            padding: 10px 40px;
-            cursor: pointer;
-        }
+	&__close-btn {
+		@include abstracts.screen(lg) {
+			padding: 10px 40px;
+			cursor: pointer;
+		}
 
-        @include abstracts.screen(sm) {
-            padding: 10px 50px 10px 20px;
-        }
-    }
+		@include abstracts.screen(sm) {
+			padding: 10px 50px 10px 20px;
+		}
+	}
 
-    &__list {
-        @extend %flexItemsCenter;
+	&__list {
+		@extend %flexItemsCenter;
 
-        @include abstracts.screen(lg) {
-            flex-direction: column;
-            align-items: flex-start;
-            height: calc(100vh - 64px);
-            padding-bottom: 20px;
-            overflow-y: auto;
-            overscroll-behavior: contain;
-        }
+		@include abstracts.screen(lg) {
+			flex-direction: column;
+			align-items: flex-start;
+			height: calc(100vh - 64px);
+			padding-bottom: 20px;
+			overflow-y: auto;
+			-ms-scroll-chaining: none;
+			overscroll-behavior: contain;
+		}
 
-        @include abstracts.screen(md) {
-            height: calc(100vh - 152px);
-        }
-    }
+		@include abstracts.screen(md) {
+			height: calc(100vh - 152px);
+		}
+	}
 
-    &__item {
-        &:hover {
-            .dropdown {
-                display: block;
-            }
-        }
+	&__item {
+		&:hover {
+			.dropdown {
+				display: block;
+			}
+		}
 
-        @include abstracts.screen(lg) {
-            width: 100%;
+		@include abstracts.screen(lg) {
+			width: 100%;
 
-            &:hover {
-                .dropdown {
-                    display: none;
-                }
-            }
+			&:hover {
+				.dropdown {
+					display: none;
+				}
+			}
 
-            &--active .dropdown {
-                display: block !important;
-            }
-        }
-    }
+			&--active .dropdown {
+				display: block !important;
+			}
+		}
+	}
 
-    &__link {
-        @extend %flexItemsCenter;
-        padding: 0 3rem;
-        gap: 0.6rem;
-        height: 5rem;
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 146.667%;
+	&__link {
+		@extend %flexItemsCenter;
+		padding: 0 3rem;
+		gap: 0.6rem;
+		height: 5rem;
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 146.667%;
 
-        @include abstracts.screen(xl) {
-            padding: 0 2rem;
-        }
+		@include abstracts.screen(xl) {
+			padding: 0 2rem;
+		}
 
-        @include abstracts.screen(lg) {
-            height: auto;
-            color: var(--navbar-text-color);
-            font-size: 1.6rem;
-            padding: 1rem 4rem;
-            line-height: 150%;
-            justify-content: space-between;
-        }
+		@include abstracts.screen(lg) {
+			height: auto;
+			color: var(--navbar-text-color);
+			font-size: 1.6rem;
+			padding: 1rem 4rem;
+			line-height: 150%;
+			justify-content: space-between;
+		}
 
-        @include abstracts.screen(sm) {
-            padding: 1rem 2rem;
-        }
-    }
+		@include abstracts.screen(sm) {
+			padding: 1rem 2rem;
+		}
+	}
 
-    &__arrow {
-        margin-top: 0.3rem;
+	&__arrow {
+		margin-top: 0.3rem;
 
-        @include abstracts.screen(lg) {
-            rotate: -90deg;
-            transition: rotate 0.2s ease-out;
-        }
-    }
+		@include abstracts.screen(lg) {
+			rotate: -90deg;
+			transition: rotate 0.2s ease-out;
+		}
+	}
 
-    &__item--active &__arrow {
-        rotate: 0deg;
-    }
+	&__item--active &__arrow {
+		rotate: 0deg;
+	}
 }
 
 .top-act {
-    @extend %flexItemsCenter;
-    margin-left: auto;
-    gap: 2rem;
+	position: relative;
+	@extend %flexItemsCenter;
+	margin-left: auto;
+	gap: 2rem;
 
-    @include abstracts.screen(md) {
-        margin-left: 0;
-    }
+	@include abstracts.screen(md) {
+		margin-left: 0;
+	}
 
-    &__group {
-        @extend %flexItemsCenter;
-        padding: 1.3rem;
-        min-width: 5rem;
-        height: 5rem;
-        gap: 2rem;
-        border-radius: 8px;
-        background: var(--top-act-group-bg-color);
-        box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow-color);
+	&__group {
+		@extend %flexItemsCenter;
+		padding: 1.3rem;
+		min-width: 5rem;
+		height: 5rem;
+		gap: 2rem;
+		border-radius: 8px;
+		background: var(--top-act-group-bg-color);
+		box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow-color);
 
-        &--multi {
-            padding-right: 2rem;
-            padding-left: 2rem;
-        }
-    }
+		&--multi {
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+	}
 
-    &__btn {
-        @extend %flexItemsCenter;
-        gap: 1rem;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-    }
+	&__btn {
+		@extend %flexItemsCenter;
+		gap: 1rem;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+	}
 
-    &__btn-sign-up.btn {
-        @include abstracts.screen(md) {
-            height: 36px;
-            padding: 0 8px;
-            font-size: 1.5rem;
-        }
-    }
+	&__btn-wrap {
+		position: relative;
 
-    &__title {
-        font-size: 1.5rem;
-        font-weight: 500;
-        line-height: 146.667%;
-    }
+		&:hover .act-dropdown {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 
-    &__separate {
-        background: var(--top-act-group-separate-color);
-        width: 0.1rem;
-        height: 100%;
-        min-height: 3rem;
-    }
+	&__btn-sign-up.btn {
+		@include abstracts.screen(md) {
+			height: 36px;
+			padding: 0 8px;
+			font-size: 1.5rem;
+		}
+	}
 
-    &__avatar {
-        $w: 5rem;
-        $h: $w;
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 146.667%;
+	}
 
-        display: block;
-        width: $w;
-        height: $h;
-        border-radius: 8px;
-        cursor: pointer;
-    }
+	&__separate {
+		background: var(--top-act-group-separate-color);
+		width: 0.1rem;
+		height: 100%;
+		min-height: 3rem;
+	}
+
+	&__avatar {
+		$w: 5rem;
+		$h: $w;
+
+		display: block;
+		width: $w;
+		height: $h;
+		border-radius: 8px;
+		cursor: pointer;
+	}
 }
 
 .nav-btn {
-    align-items: center;
-    gap: 16px;
-    padding: 10px 40px;
+	align-items: center;
+	gap: 16px;
+	padding: 10px 40px;
 
-    @include abstracts.screen(sm) {
-        padding: 10px 20px;
-    }
+	@include abstracts.screen(sm) {
+		padding: 10px 20px;
+	}
 
-    &__title,
-    &__qnt {
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 146.667%;
-    }
+	&__title,
+	&__qnt {
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 146.667%;
+	}
 
-    &__qnt {
-        margin-left: auto;
-    }
+	&__qnt {
+		margin-left: auto;
+	}
+}
+
+.act-dropdown {
+	opacity: 0;
+	visibility: hidden;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+
+	cursor: auto;
+	position: absolute;
+	top: calc(100%);
+	right: -90px;
+	padding-top: 36px;
+	width: min(480px, 100vw);
+	transition: 0.2s linear;
+	transition-property: opacity, visibility;
+
+	&__inner {
+		position: relative;
+		padding: 30px;
+
+		border-radius: 20px;
+		background: var(--header-act-dropdown-bg-color);
+		box-shadow: 0px 40px 90px 20px var(--header-act-dropdown-shadow-color);
+	}
+
+	&__arrow {
+		position: absolute;
+		bottom: 100%;
+		right: 90px;
+		width: 60.25px;
+		-webkit-filter: var(--header-act-dropdown-arrow-color);
+		filter: var(--header-act-dropdown-arrow-color);
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-block: 20px;
+	}
+
+	&__title {
+		color: var(--text-color);
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 145.455%;
+	}
+
+	&__view-all {
+		color: #0071dc;
+		font-feature-settings: 'liga' off, 'clig' off;
+		font-size: 2rem;
+		line-height: 145.455%;
+	}
+
+	&__bottom {
+		margin-block: 20px;
+		padding-block: 20px;
+		border-width: 1.5px 0;
+		border-color: var(--header-act-dropdown-separate-color);
+		border-style: solid;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&--bold {
+			font-weight: 500;
+		}
+	}
+
+	&__row + &__row {
+		margin-top: 10px;
+	}
+
+	&__list {
+		padding-bottom: 10px;
+		flex-wrap: nowrap;
+		overflow: auto;
+	}
+
+	&__label,
+	&__value {
+		color: var(--text-color);
+		font-feature-settings: 'liga' off, 'clig' off;
+		font-size: 1.8rem;
+		line-height: 145.455%;
+	}
+
+	&__checkout {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		&-btn {
+			padding: 18px 40px;
+		}
+	}
+}
+
+.cart-preview-item {
+	&__img-wrap {
+		position: relative;
+		padding-top: 100%;
+
+		border: 1px solid var(--header-act-dropdown-separate-color);
+		border-radius: 4px;
+	}
+
+	&__thumb {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		-o-object-fit: contain;
+		object-fit: contain;
+	}
+
+	&__title {
+		margin-top: 14px;
+
+		color: var(--text-color);
+		font-size: 1.4rem;
+		line-height: 142.857%;
+	}
+
+	&__price {
+		margin-top: 6px;
+
+		color: var(--text-color);
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 146.667%;
+	}
 }
