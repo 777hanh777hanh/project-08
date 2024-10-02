@@ -2296,6 +2296,11 @@ html {
   border-color: var(--header-act-dropdown-separate-color);
   border-style: solid;
 }
+.act-dropdown__separate {
+  height: 1.5px;
+  background: var(--header-act-dropdown-separate-color);
+  margin: 20px 0;
+}
 .act-dropdown__row {
   display: flex;
   align-items: center;
