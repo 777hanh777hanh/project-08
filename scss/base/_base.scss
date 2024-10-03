@@ -91,6 +91,7 @@ strong {
 	transition: 0.125s linear;
 	transition-delay: 1.5s;
 	transition-property: opacity, visibility;
+	z-index: 9999;
 
 	&:hover {
 		cursor: pointer;

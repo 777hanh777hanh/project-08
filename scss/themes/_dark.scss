@@ -121,4 +121,8 @@ html.dark {
 	--checkout-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
 		hue-rotate(191deg) brightness(93%) contrast(83%);
 	--checkout-gift-icon-bg-color: #292e39;
+
+	// dialog
+	--dialog-info-bg-color: #2f3441;
+	--dialog-shadow-color: rgba(23, 28, 40, 0.4);
 }
