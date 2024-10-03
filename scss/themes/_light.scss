@@ -115,4 +115,14 @@ html {
 
 	// Text content
 	--hr-bg-color: #ebebeb;
+
+	//checkout
+	--checkout-detail-bg-color: #f6f6f6;
+	--checkout-info-bg-color: #fff;
+	--checkout-text-color: #1a162e;
+	--checkout-shadow-color: rgba(237, 237, 246, 0.2);
+	--checkout-separate-color: #d2d1d6;
+	--checkout-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
+		hue-rotate(220deg) brightness(99%) contrast(94%);
+	--checkout-gift-icon-bg-color: rgba(118, 68, 225, 0.1);
 }

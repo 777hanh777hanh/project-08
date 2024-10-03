@@ -111,4 +111,14 @@ html.dark {
 
 	// Text content
 	--hr-bg-color: #414141;
+
+	//checkout
+	--checkout-detail-bg-color: #292e39;
+	--checkout-info-bg-color: #171c28;
+	--checkout-text-color: #b9babe;
+	--checkout-shadow-color: rgba(23, 28, 40, 0.2);
+	--checkout-separate-color: #292e39;
+	--checkout-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+		hue-rotate(191deg) brightness(93%) contrast(83%);
+	--checkout-gift-icon-bg-color: #292e39;
 }
