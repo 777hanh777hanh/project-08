@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Checkout | Grocery Mart</title>
+		<title>Shipping | Grocery Mart</title>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -68,10 +68,20 @@
 							</a>
 						</li>
 						<li>
+							<a class="breadcrumbs__link" href="/checkout.html"
+								>Checkout
+								<img
+									src="./assets/icons/arrow-right.svg"
+									alt=""
+									class="breadcrumbs__icon"
+								/>
+							</a>
+						</li>
+						<li>
 							<a
 								class="breadcrumbs__link breadcrumbs__link--current"
-								href="/checkout.html"
-								>Checkout
+								href="/shipping.html"
+								>Shipping
 								<img
 									src="./assets/icons/arrow-right.svg"
 									alt=""
@@ -87,6 +97,128 @@
 					<div class="row gy-lg-4">
 						<div class="col-8 col-lg-12">
 							<div class="cart-info">
+								<div class="cart-info__heading">
+									1. Shipping, arrives between Mon, May 16—Tue, May 24
+								</div>
+								<div class="cart-info__separate"></div>
+
+								<!-- checkout address -->
+								<div class="user-address">
+									<div class="user-address__top">
+										<div>
+											<h3 class="user-address__title">Shipping address</h3>
+											<p class="user-address__desc">
+												Where should we deliver your order?
+											</p>
+										</div>
+										<button
+											class="btn btn--primary btn--rounded btn--small user-address__btn"
+										>
+											<img class="" src="./assets/icons/plus.svg" alt="" />
+											Add a new address
+										</button>
+									</div>
+									<div class="user-address__list">
+										<!-- Empty Message -->
+										<p class="user-address__message d-none">
+											Not Address Yet.
+											<a class="user-address__link" href="#!">
+												Add a new address.</a
+											>
+										</p>
+
+										<!-- Address Card 1 -->
+										<article class="address-card">
+											<div class="address-card__left">
+												<div class="address-card__choose">
+													<!-- Custom checkbox -->
+													<label class="address-card__checkbox">
+														<input
+															checked
+															type="checkbox"
+															name=""
+															class="address-card__checkbox-input"
+														/>
+													</label>
+												</div>
+												<div class="address-card__info">
+													<h4 class="address-card__title">Imran Khan</h4>
+													<p class="address-card__desc">
+														Museum of Rajas, Sylhet Sadar, Sylhet 3100.
+													</p>
+													<ul class="address-card__list">
+														<li class="address-card__list-item">
+															Shipping
+														</li>
+														<li class="address-card__list-item">
+															Delivery from store
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="address-card__right">
+												<div class="address-card__ctrl">
+													<button class="address-card__ctrl-btn">
+														<img
+															class="address-card__icon"
+															src="./assets/icons/edit.svg"
+															alt=""
+														/>
+														<span>Edit</span>
+													</button>
+												</div>
+											</div>
+										</article>
+
+										<!-- Address Card 2 -->
+										<article class="address-card">
+											<div class="address-card__left">
+												<div class="address-card__choose">
+													<!-- Custom checkbox -->
+													<label class="address-card__checkbox">
+														<input
+															type="checkbox"
+															name=""
+															class="address-card__checkbox-input"
+														/>
+													</label>
+												</div>
+												<div class="address-card__info">
+													<h4 class="address-card__title">Imran Khan</h4>
+													<p class="address-card__desc">
+														Al Hamra City (10th Floor), Hazrat Shahjalal
+														Road, Sylhet, Sylhet, Bangladesh
+													</p>
+													<ul class="address-card__list">
+														<li class="address-card__list-item">
+															Shipping
+														</li>
+														<li class="address-card__list-item">
+															Delivery from store
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="address-card__right">
+												<div class="address-card__ctrl">
+													<button class="address-card__ctrl-btn">
+														<img
+															class="address-card__icon"
+															src="./assets/icons/edit.svg"
+															alt=""
+														/>
+														<span>Edit</span>
+													</button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+
+								<div class="cart-info__separate"></div>
+
+								<h2 class="cart-info__sub-heading">Cart Details</h2>
+
 								<div class="cart-info__list">
 									<!-- Cart Item 1 -->
 									<article class="cart-item">
@@ -113,7 +245,7 @@
 													<div class="cart-item__input">
 														<span>LavAzza</span>
 														<img
-															class="cart-item__input-img"
+															class="cart-item__icon"
 															src="./assets/icons/arrow-down-2.svg"
 															alt=""
 														/>
@@ -121,7 +253,7 @@
 													<div class="cart-item__input">
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__input-img"
+																class="cart-item__icon"
 																src="./assets/icons/minus.svg"
 																alt=""
 															/>
@@ -129,7 +261,7 @@
 														<span>1</span>
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__input-img"
+																class="cart-item__icon"
 																src="./assets/icons/plus.svg"
 																alt=""
 															/>
@@ -187,7 +319,7 @@
 													<div class="cart-item__input">
 														<span>LavAzza</span>
 														<img
-															class="cart-item__input-img"
+															class="cart-item__icon"
 															src="./assets/icons/arrow-down-2.svg"
 															alt=""
 														/>
@@ -195,7 +327,7 @@
 													<div class="cart-item__input">
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__input-img"
+																class="cart-item__icon"
 																src="./assets/icons/minus.svg"
 																alt=""
 															/>
@@ -203,7 +335,7 @@
 														<span>2</span>
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__input-img"
+																class="cart-item__icon"
 																src="./assets/icons/plus.svg"
 																alt=""
 															/>
@@ -261,7 +393,7 @@
 													<div class="cart-item__input">
 														<span>LavAzza</span>
 														<img
-															class="cart-item__input-img"
+															class="cart-item__icon"
 															src="./assets/icons/arrow-down-2.svg"
 															alt=""
 														/>
@@ -269,7 +401,7 @@
 													<div class="cart-item__input">
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__input-img"
+																class="cart-item__icon"
 																src="./assets/icons/minus.svg"
 																alt=""
 															/>
@@ -277,7 +409,7 @@
 														<span>1</span>
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__input-img"
+																class="cart-item__icon"
 																src="./assets/icons/plus.svg"
 																alt=""
 															/>
@@ -346,7 +478,7 @@
 						</div>
 						<div class="col-4 col-lg-12">
 							<div class="row g-4">
-								<div class="col col-lg-7 col-md-12">
+								<div class="col">
 									<div class="cart-info">
 										<div class="cart-info__row">
 											<span
@@ -377,34 +509,10 @@
 										</div>
 
 										<a
-											href="/shipping.html"
+											href=""
 											class="btn btn--primary btn--rounded cart-info__next-btn"
 										>
 											Continue to checkout
-										</a>
-									</div>
-								</div>
-								<div class="col col-lg-5 col-md-12">
-									<div class="cart-info">
-										<a href>
-											<article class="gift-item">
-												<div class="gift-item__icon-wrap">
-													<img
-														src="./assets/icons/gift.svg"
-														alt=""
-														class="gift-item__icon"
-													/>
-												</div>
-												<div class="gift-item__content">
-													<h3 class="gift-item__title">
-														Send this order as a gift.
-													</h3>
-													<p class="gift-item__desc">
-														Available items will be shipped to your gift
-														recipient.
-													</p>
-												</div>
-											</article>
 										</a>
 									</div>
 								</div>
@@ -424,11 +532,7 @@
 		<!-- Dialog / modal -->
 		<div class="dialog hide" id="delete-confirm">
 			<div class="dialog__content">
-				<div class="dialog__text">
-					Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet
-					consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet
-					consectetur.
-				</div>
+				<div class="dialog__text">Do you want to delete this item from your cart?</div>
 				<div class="dialog__bottom">
 					<button
 						class="btn btn--text dialog__btn btn--small js-toggle"
