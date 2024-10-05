@@ -66,6 +66,9 @@ html {
 	--form-border-color: #d2d1d6;
 	--form-input-placeholder-color: #d2d1d6;
 	--form-checkbox-label-color: #9e9da8;
+	--form-icon-color: brightness(0) saturate(100%) invert(15%) sepia(38%) saturate(356%)
+		hue-rotate(184deg) brightness(96%) contrast(87%);
+	--form-shadow-color: rgba(200, 200, 200, 0.4);
 
 	// Footer
 	--footer-bg-color: #eee;
@@ -126,7 +129,7 @@ html {
 		hue-rotate(220deg) brightness(99%) contrast(94%);
 	--checkout-gift-icon-bg-color: rgba(118, 68, 225, 0.1);
 
-	// dialog
-	--dialog-info-bg-color: #fff;
-	--dialog-shadow-color: rgba(200, 200, 200, 0.4);
+	// modal
+	--modal-info-bg-color: #fff;
+	--modal-shadow-color: rgba(200, 200, 200, 0.4);
 }
