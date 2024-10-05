@@ -17,16 +17,18 @@
 	@extend %flexItemsCenter;
 	position: relative;
 	z-index: 5;
-	padding: 3rem 0;
-	@include abstracts.screen(lg) {
-		padding: 2.3rem 0;
-	}
-	@include abstracts.screen(sm) {
-		padding: 1.6rem 0;
-	}
+	padding: 20px 0;
 
 	&__more {
 		cursor: pointer;
+	}
+
+	@include abstracts.screen(md) {
+		padding: 18px 0;
+	}
+
+	@include abstracts.screen(sm) {
+		padding: 16px 0;
 	}
 }
 
