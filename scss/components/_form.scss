@@ -2,6 +2,8 @@
 
 .form {
 	$error-clr: #cc3300;
+	$error-filter-clr: brightness(0) saturate(100%) invert(21%) sepia(48%) saturate(6606%)
+		hue-rotate(19deg) brightness(93%) contrast(101%);
 
 	&:has(:invalid) &__submit-btn {
 		opacity: 0.5;
@@ -24,6 +26,14 @@
 
 		> * {
 			flex: 1;
+		}
+
+		&--spacing {
+			margin-top: 30px;
+
+			@include abstracts.screen(sm) {
+				margin-top: 20px;
+			}
 		}
 	}
 
@@ -60,6 +70,8 @@
 
 			&--error {
 				display: block;
+				-webkit-filter: $error-filter-clr;
+				filter: $error-filter-clr;
 
 				-webkit-animation: shake 0.4s ease-in;
 
@@ -175,7 +187,7 @@
 		}
 	}
 
-	&__close-dialog {
+	&__close-modal {
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -185,7 +197,7 @@
 		line-height: 1;
 	}
 
-	&__dialog-heading {
+	&__modal-heading {
 		text-align: center;
 		font-size: 2rem;
 		font-weight: 500;
@@ -193,7 +205,7 @@
 		line-height: 146.44%;
 	}
 
-	&__select-dialog {
+	&__select-modal {
 		opacity: 0;
 		visibility: hidden;
 		translate: 0 12px;
@@ -425,13 +437,19 @@
 	&__label {
 		display: block;
 		font-size: 2.2rem;
-		font-weight: 500;
+		font-weight: 600;
 		line-height: 145.455%;
 
 		&--small {
 			margin-bottom: 10px;
 			font-size: 1.4rem;
 			line-height: 142.857%;
+		}
+
+		&--medium {
+			margin-bottom: 20px;
+			font-size: 1.8rem;
+			line-height: 144.444%;
 		}
 	}
 

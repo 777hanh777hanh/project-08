@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 // Filter Button
 .filter-btn {
 	display: flex;
@@ -62,6 +64,14 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	@include abstracts.screen(xs) {
+		white-space: normal;
+		text-align: center;
+		flex-wrap: wrap;
+		height: auto;
+		padding: 10px 20px;
+	}
 
 	+ .btn {
 		&:not(.btn--no-margin) {

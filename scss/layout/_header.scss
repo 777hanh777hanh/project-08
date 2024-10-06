@@ -330,13 +330,13 @@
 	&__bottom {
 		margin-block: 20px;
 		padding-block: 20px;
-		border-width: 1.5px 0;
+		border-width: 1px 0;
 		border-color: var(--header-act-dropdown-separate-color);
 		border-style: solid;
 	}
 
 	&__separate {
-		height: 1.5px;
+		height: 1px;
 		background: var(--header-act-dropdown-separate-color);
 		margin: 20px 0;
 	}

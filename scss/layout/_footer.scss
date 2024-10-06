@@ -1,190 +1,236 @@
 @use '../abstracts';
 
 .footer {
-    background: var(--footer-bg-color);
-    border-top-left-radius: 120px;
+	background: var(--footer-bg-color);
+	border-top-left-radius: 120px;
 
-    &__inner {
-        padding: 40px 0;
-        color: var(--footer-text-color);
-        font-size: 1.4rem;
-    }
+	&__inner {
+		padding: 40px 0;
+		color: var(--footer-text-color);
+		font-size: 1.4rem;
+	}
 
-    &__container {
-        @include abstracts.screen(lg) {
-            margin-top: 40px;
-        }
-    }
+	&__container {
+		@include abstracts.screen(lg) {
+			margin-top: 40px;
+		}
+	}
 
-    &__row:last-child {
-        align-items: end;
-    }
+	&__row:last-child {
+		align-items: end;
+	}
 
-    &__col {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
+	&__col {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 
-        height: 100%;
-        padding: 30px 0px;
+		height: 100%;
+		padding: 30px 0px;
 
-        @include abstracts.screen(md) {
-            padding: 20px 0;
-        }
-    }
+		@include abstracts.screen(md) {
+			padding: 20px 0;
+		}
+	}
 
-    &__logo {
-        margin-left: 0 !important;
+	&__logo {
+		margin-left: 0 !important;
 
-        .logo__img {
-            width: 24px;
-        }
-    }
+		@include abstracts.screen(xs) {
+			flex-direction: column;
+			margin-right: 0 !important;
+		}
 
-    &__subscribe-form {
-        display: flex;
-        margin-top: -4px;
-        flex-wrap: nowrap;
-        gap: 14px;
+		.logo__img {
+			width: 24px;
+		}
+	}
 
-        @include abstracts.screen(xs) {
-            flex-wrap: wrap;
-        }
-    }
+	&__subscribe-form {
+		display: flex;
+		margin-top: -4px;
+		flex-wrap: nowrap;
+		gap: 14px;
 
-    &__input {
-        border: 1px solid #b9babe;
-        border-radius: 999px;
-        padding: 0 20px;
-        height: 36px;
-        flex: 1;
-        font-weight: 500;
+		@include abstracts.screen(xs) {
+			flex-direction: column;
+		}
+	}
 
-        &::placeholder {
-            opacity: 0.5;
-            font-weight: 400;
-        }
+	&__input {
+		border: 1px solid #b9babe;
+		border-radius: 999px;
+		padding: 0 20px;
+		height: 36px;
+		flex: 1;
+		font-weight: 500;
 
-        @include abstracts.screen(md) {
-            font-size: 1.6rem;
-        }
-    }
+		@include abstracts.screen(xs) {
+			width: 100%;
+			flex-shrink: 0;
+			min-height: 42px;
+		}
 
-    &__submit {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        gap: 6px;
+		&::-webkit-input-placeholder {
+			opacity: 0.5;
+			font-weight: 400;
+		}
+		&::-moz-placeholder {
+			opacity: 0.5;
+			font-weight: 400;
+		}
+		&:-ms-input-placeholder {
+			opacity: 0.5;
+			font-weight: 400;
+		}
+		&::-ms-input-placeholder {
+			opacity: 0.5;
+			font-weight: 400;
+		}
+		&::placeholder {
+			opacity: 0.5;
+			font-weight: 400;
+		}
 
-        &.btn {
-            padding: 0 12px;
-            height: 36px;
-            font-size: 1.3rem;
-        }
+		@include abstracts.screen(md) {
+			font-size: 1.6rem;
+		}
+	}
 
-        &-icon {
-            width: 20px;
-        }
-    }
+	&__submit {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: 6px;
 
-    &__heading {
-        font-size: 1.8rem;
-        font-weight: 500;
-    }
+		&.btn {
+			padding: 0 12px;
+			height: 36px;
+			font-size: 1.3rem;
+		}
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
+		&-icon {
+			width: 20px;
+		}
+	}
 
-    &__link {
-        color: var(--footer-link-color);
+	&__heading {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
 
-        &:hover {
-            color: var(--footer-link-active-color);
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-    }
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
 
-    &__label {
-        display: block;
-        margin-bottom: 4px;
-        font-weight: 600;
-        user-select: none;
-    }
+	&__link {
+		color: var(--footer-link-color);
 
-    &__text + &__text {
-        margin-top: 6px;
-    }
+		&:hover {
+			color: var(--footer-link-active-color);
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
 
-    &__socials {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 28px;
-        height: 100%;
-        align-items: flex-end;
+		@include abstracts.screen(xs) {
+			text-wrap: wrap;
+			word-break: break-all;
+		}
+	}
 
-        @include abstracts.screen(md) {
-            margin-top: 30px;
-            gap: 30px;
-            justify-content: space-evenly;
-            align-items: center;
-            flex: 1;
-        }
-    }
+	&__label {
+		display: block;
+		margin-bottom: 4px;
+		font-weight: 600;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
 
-    &__social-link {
-        display: flex;
-        justify-content: space-around;
-        width: 20px;
-        height: 20px;
+	&__text + &__text {
+		margin-top: 6px;
+	}
 
-        @include abstracts.screen(md) {
-            width: 26px;
-            height: 26px;
-        }
+	&__socials {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 28px;
+		height: 100%;
+		align-items: flex-end;
 
-        &--facebook {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(1259%) hue-rotate(202deg)
-                    brightness(102%) contrast(93%);
-            }
-        }
-        &--youtube {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(6275%) hue-rotate(358deg)
-                    brightness(97%) contrast(113%);
-            }
-        }
-        &--tiktok {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(68%) sepia(69%) saturate(1555%) hue-rotate(126deg)
-                    brightness(103%) contrast(103%);
-            }
-        }
-        &--twitter {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(61%) sepia(32%) saturate(6021%) hue-rotate(175deg)
-                    brightness(97%) contrast(96%);
-            }
-        }
-        &--linkedin {
-            &:hover {
-                filter: brightness(0) saturate(100%) invert(27%) sepia(58%) saturate(2640%) hue-rotate(179deg)
-                    brightness(98%) contrast(102%);
-            }
-        }
-    }
+		@include abstracts.screen(md) {
+			margin-top: 30px;
+			flex-wrap: wrap;
+			gap: 30px;
+			justify-content: space-evenly;
+			align-items: center;
+			flex: 1;
+		}
+	}
 
-    &__bottom {
-        margin-top: 30px;
-    }
+	&__social-link {
+		display: flex;
+		justify-content: space-around;
+		width: 20px;
+		height: 20px;
 
-    &__copyright {
-        text-align: center;
-        font-size: 1.2rem;
-    }
+		@include abstracts.screen(md) {
+			width: 26px;
+			height: 26px;
+		}
+
+		&--facebook {
+			&:hover {
+				-webkit-filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(1259%)
+					hue-rotate(202deg) brightness(102%) contrast(93%);
+				filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(1259%)
+					hue-rotate(202deg) brightness(102%) contrast(93%);
+			}
+		}
+		&--youtube {
+			&:hover {
+				-webkit-filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(6275%)
+					hue-rotate(358deg) brightness(97%) contrast(113%);
+				filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(6275%)
+					hue-rotate(358deg) brightness(97%) contrast(113%);
+			}
+		}
+		&--tiktok {
+			&:hover {
+				-webkit-filter: brightness(0) saturate(100%) invert(68%) sepia(69%) saturate(1555%)
+					hue-rotate(126deg) brightness(103%) contrast(103%);
+				filter: brightness(0) saturate(100%) invert(68%) sepia(69%) saturate(1555%)
+					hue-rotate(126deg) brightness(103%) contrast(103%);
+			}
+		}
+		&--twitter {
+			&:hover {
+				-webkit-filter: brightness(0) saturate(100%) invert(61%) sepia(32%) saturate(6021%)
+					hue-rotate(175deg) brightness(97%) contrast(96%);
+				filter: brightness(0) saturate(100%) invert(61%) sepia(32%) saturate(6021%)
+					hue-rotate(175deg) brightness(97%) contrast(96%);
+			}
+		}
+		&--linkedin {
+			&:hover {
+				-webkit-filter: brightness(0) saturate(100%) invert(27%) sepia(58%) saturate(2640%)
+					hue-rotate(179deg) brightness(98%) contrast(102%);
+				filter: brightness(0) saturate(100%) invert(27%) sepia(58%) saturate(2640%)
+					hue-rotate(179deg) brightness(98%) contrast(102%);
+			}
+		}
+	}
+
+	&__bottom {
+		margin-top: 30px;
+	}
+
+	&__copyright {
+		text-align: center;
+		font-size: 1.2rem;
+	}
 }

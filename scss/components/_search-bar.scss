@@ -27,6 +27,22 @@
 			font-size: 1.6rem;
 		}
 
+		@include abstracts.screen(xs) {
+			width: 100%;
+		}
+
+		&::-webkit-input-placeholder {
+			font-weight: 400;
+		}
+		&::-moz-placeholder {
+			font-weight: 400;
+		}
+		&:-ms-input-placeholder {
+			font-weight: 400;
+		}
+		&::-ms-input-placeholder {
+			font-weight: 400;
+		}
 		&::placeholder {
 			font-weight: 400;
 		}
@@ -42,6 +58,7 @@
 	}
 
 	&__icon {
+		-webkit-filter: var(--search-bar-icon-color);
 		filter: var(--search-bar-icon-color);
 	}
 }

@@ -134,17 +134,17 @@
 
 										<!-- Address Card 1 -->
 										<article class="address-card">
-											<div class="address-card__left">
+											<label class="address-card__left">
 												<div class="address-card__choose">
 													<!-- Custom checkbox -->
-													<label class="address-card__checkbox">
+													<span class="cart-info__checkbox">
 														<input
 															checked
-															type="checkbox"
-															name=""
-															class="address-card__checkbox-input"
+															type="radio"
+															name="shipping-address"
+															class="cart-info__checkbox-input"
 														/>
-													</label>
+													</span>
 												</div>
 												<div class="address-card__info">
 													<h4 class="address-card__title">Imran Khan</h4>
@@ -160,10 +160,13 @@
 														</li>
 													</ul>
 												</div>
-											</div>
+											</label>
 											<div class="address-card__right">
 												<div class="address-card__ctrl">
-													<button class="address-card__ctrl-btn">
+													<button
+														class="cart-info__edit-btn js-toggle"
+														toggle-target="#add-new-address"
+													>
 														<img
 															class="address-card__icon"
 															src="./assets/icons/edit.svg"
@@ -177,16 +180,16 @@
 
 										<!-- Address Card 2 -->
 										<article class="address-card">
-											<div class="address-card__left">
+											<label class="address-card__left">
 												<div class="address-card__choose">
 													<!-- Custom checkbox -->
-													<label class="address-card__checkbox">
+													<span class="cart-info__checkbox">
 														<input
-															type="checkbox"
-															name=""
-															class="address-card__checkbox-input"
+															type="radio"
+															name="shipping-address"
+															class="cart-info__checkbox-input"
 														/>
-													</label>
+													</span>
 												</div>
 												<div class="address-card__info">
 													<h4 class="address-card__title">Imran Khan</h4>
@@ -203,10 +206,13 @@
 														</li>
 													</ul>
 												</div>
-											</div>
+											</label>
 											<div class="address-card__right">
 												<div class="address-card__ctrl">
-													<button class="address-card__ctrl-btn">
+													<button
+														class="cart-info__edit-btn js-toggle"
+														toggle-target="#add-new-address"
+													>
 														<img
 															class="address-card__icon"
 															src="./assets/icons/edit.svg"
@@ -642,7 +648,7 @@
 									placeholder="City/District/Town"
 									id="city"
 									class="form__input js-toggle"
-									toggle-target="#city-dialog"
+									toggle-target="#city-modal"
 									aria-readonly="true"
 									readonly
 								/>
@@ -652,15 +658,15 @@
 									class="form__input-icon-error"
 								/>
 
-								<div class="form__select-dialog hide" id="city-dialog">
-									<h3 class="form__dialog-heading d-none d-sm-block">
+								<div class="form__select-modal hide" id="city-modal">
+									<h3 class="form__modal-heading d-none d-sm-block">
 										City/District/Town
 									</h3>
 									<!-- close button -->
 									<button
 										type="button "
-										class="form__close-dialog d-none d-sm-flex js-toggle"
-										toggle-target="#city-dialog"
+										class="form__close-modal d-none d-sm-flex js-toggle"
+										toggle-target="#city-modal"
 									>
 										&times;
 									</button>

@@ -1,19 +1,19 @@
 .message {
-    padding: 10px 14px;
-    width: 100%;
+	padding: 10px 14px;
+	width: 100%;
 
-    text-align: start;
-    border: 1.5px solid #d2d1d6;
-    background: transparent;
-    border-radius: 10px;
+	text-align: start;
+	border: 1px solid #d2d1d6;
+	background: transparent;
+	border-radius: 10px;
 
-    &__text {
-        color: inherit;
-        font-weight: 500;
-    }
+	&__text {
+		color: inherit;
+		font-weight: 500;
+	}
 
-    &--success {
-        background: #bfe9cf90;
-        border-color: #46a05c;
-    }
+	&--success {
+		background: #bfe9cf90;
+		border-color: #46a05c;
+	}
 }
