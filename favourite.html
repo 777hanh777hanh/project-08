@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Shipping | Grocery Mart</title>
+		<title>Favourite | Grocery Mart</title>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
@@ -68,20 +68,10 @@
 							</a>
 						</li>
 						<li>
-							<a class="breadcrumbs__link" href="./checkout.html"
-								>Checkout
-								<img
-									src="./assets/icons/arrow-right.svg"
-									alt=""
-									class="breadcrumbs__icon"
-								/>
-							</a>
-						</li>
-						<li>
 							<a
 								class="breadcrumbs__link breadcrumbs__link--current"
-								href="./shipping.html"
-								>Shipping
+								href="./favourite.html"
+								>Favourite
 								<img
 									src="./assets/icons/arrow-right.svg"
 									alt=""
@@ -97,139 +87,6 @@
 					<div class="row gy-lg-4">
 						<div class="col-8 col-lg-12">
 							<div class="cart-info">
-								<div class="cart-info__heading">
-									1. Shipping, arrives between Mon, May 16—Tue, May 24
-								</div>
-								<div class="cart-info__separate"></div>
-
-								<!-- checkout address -->
-								<div class="user-address">
-									<div class="user-address__top">
-										<div>
-											<h3 class="user-address__title">Shipping address</h3>
-											<p class="user-address__desc">
-												Where should we deliver your order?
-											</p>
-										</div>
-										<button
-											class="btn btn--primary btn--rounded btn--small user-address__btn js-toggle"
-											toggle-target="#add-new-address"
-										>
-											<img class="" src="./assets/icons/plus.svg" alt="" />
-											Add a new address
-										</button>
-									</div>
-									<div class="user-address__list">
-										<!-- Empty Message -->
-										<p class="user-address__message d-none">
-											Not Address Yet.
-											<a
-												class="user-address__link js-toggle"
-												toggle-target="#add-new-address"
-												href="#!"
-											>
-												Add a new address.</a
-											>
-										</p>
-
-										<!-- Address Card 1 -->
-										<article class="address-card">
-											<label class="address-card__left">
-												<div class="address-card__choose">
-													<!-- Custom checkbox -->
-													<span class="cart-info__checkbox">
-														<input
-															checked
-															type="radio"
-															name="shipping-address"
-															class="cart-info__checkbox-input"
-														/>
-													</span>
-												</div>
-												<div class="address-card__info">
-													<h4 class="address-card__title">Imran Khan</h4>
-													<p class="address-card__desc">
-														Museum of Rajas, Sylhet Sadar, Sylhet 3100.
-													</p>
-													<ul class="address-card__list">
-														<li class="address-card__list-item">
-															Shipping
-														</li>
-														<li class="address-card__list-item">
-															Delivery from store
-														</li>
-													</ul>
-												</div>
-											</label>
-											<div class="address-card__right">
-												<div class="address-card__ctrl">
-													<button
-														class="cart-info__edit-btn js-toggle"
-														toggle-target="#add-new-address"
-													>
-														<img
-															class="address-card__icon"
-															src="./assets/icons/edit.svg"
-															alt=""
-														/>
-														<span>Edit</span>
-													</button>
-												</div>
-											</div>
-										</article>
-
-										<!-- Address Card 2 -->
-										<article class="address-card">
-											<label class="address-card__left">
-												<div class="address-card__choose">
-													<!-- Custom checkbox -->
-													<span class="cart-info__checkbox">
-														<input
-															type="radio"
-															name="shipping-address"
-															class="cart-info__checkbox-input"
-														/>
-													</span>
-												</div>
-												<div class="address-card__info">
-													<h4 class="address-card__title">Imran Khan</h4>
-													<p class="address-card__desc">
-														Al Hamra City (10th Floor), Hazrat Shahjalal
-														Road, Sylhet, Sylhet, Bangladesh
-													</p>
-													<ul class="address-card__list">
-														<li class="address-card__list-item">
-															Shipping
-														</li>
-														<li class="address-card__list-item">
-															Delivery from store
-														</li>
-													</ul>
-												</div>
-											</label>
-											<div class="address-card__right">
-												<div class="address-card__ctrl">
-													<button
-														class="cart-info__edit-btn js-toggle"
-														toggle-target="#add-new-address"
-													>
-														<img
-															class="address-card__icon"
-															src="./assets/icons/edit.svg"
-															alt=""
-														/>
-														<span>Edit</span>
-													</button>
-												</div>
-											</div>
-										</article>
-									</div>
-								</div>
-
-								<div class="cart-info__separate"></div>
-
-								<h2 class="cart-info__sub-heading">Cart Details</h2>
-
 								<div class="cart-info__list">
 									<!-- Cart Item 1 -->
 									<article class="cart-item">
@@ -256,7 +113,7 @@
 													<div class="cart-item__input">
 														<span>LavAzza</span>
 														<img
-															class="cart-item__icon"
+															class="cart-item__input-img"
 															src="./assets/icons/arrow-down-2.svg"
 															alt=""
 														/>
@@ -264,7 +121,7 @@
 													<div class="cart-item__input">
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__icon"
+																class="cart-item__input-img"
 																src="./assets/icons/minus.svg"
 																alt=""
 															/>
@@ -272,7 +129,7 @@
 														<span>1</span>
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__icon"
+																class="cart-item__input-img"
 																src="./assets/icons/plus.svg"
 																alt=""
 															/>
@@ -330,7 +187,7 @@
 													<div class="cart-item__input">
 														<span>LavAzza</span>
 														<img
-															class="cart-item__icon"
+															class="cart-item__input-img"
 															src="./assets/icons/arrow-down-2.svg"
 															alt=""
 														/>
@@ -338,7 +195,7 @@
 													<div class="cart-item__input">
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__icon"
+																class="cart-item__input-img"
 																src="./assets/icons/minus.svg"
 																alt=""
 															/>
@@ -346,7 +203,7 @@
 														<span>2</span>
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__icon"
+																class="cart-item__input-img"
 																src="./assets/icons/plus.svg"
 																alt=""
 															/>
@@ -404,7 +261,7 @@
 													<div class="cart-item__input">
 														<span>LavAzza</span>
 														<img
-															class="cart-item__icon"
+															class="cart-item__input-img"
 															src="./assets/icons/arrow-down-2.svg"
 															alt=""
 														/>
@@ -412,7 +269,7 @@
 													<div class="cart-item__input">
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__icon"
+																class="cart-item__input-img"
 																src="./assets/icons/minus.svg"
 																alt=""
 															/>
@@ -420,7 +277,7 @@
 														<span>1</span>
 														<button class="cart-item__input-btn">
 															<img
-																class="cart-item__icon"
+																class="cart-item__input-img"
 																src="./assets/icons/plus.svg"
 																alt=""
 															/>
@@ -520,14 +377,13 @@
 										</div>
 
 										<a
-											href="./payment.html"
+											href="./shipping.html"
 											class="btn btn--primary btn--rounded cart-info__next-btn"
 										>
 											Continue to checkout
 										</a>
 									</div>
 								</div>
-
 								<div class="col col-lg-5 col-md-12">
 									<div class="cart-info">
 										<a href>
@@ -565,10 +421,8 @@
 			loadComponent('#footer', './templates/footer.html');
 		</script>
 
-		<!-- Dialog / modal -->
-		<!-- Modal Confirm delete cart item -->
+		<!-- dialog / modal -->
 		<div class="modal modal--small hide" id="delete-confirm">
-			<!-- <button type="button" class="modal__close">&times;</button> -->
 			<div class="modal__content">
 				<div class="modal__text">Do you want to delete this item from your cart?</div>
 				<div class="modal__bottom">
@@ -587,189 +441,6 @@
 				</div>
 			</div>
 			<div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
-		</div>
-
-		<!-- Dialog / modal -->
-		<!-- Modal: address new shopping address -->
-		<div id="add-new-address" class="modal hide" style="--content-width: 650px">
-			<div class="modal__content">
-				<h2 class="modal__heading">Add new shipping address</h2>
-				<form action="" class="form">
-					<div class="modal__body">
-						<div class="form__row">
-							<div class="form__group">
-								<label for="name" class="form__label form__label--small"
-									>Name</label
-								>
-								<div class="form__text-input form__text-input--small">
-									<input
-										type="text"
-										name="name"
-										id="name"
-										placeholder="Name"
-										class="form__input"
-										required
-										minlength="2"
-									/>
-									<img
-										src="./assets/icons/form-error.svg"
-										alt=""
-										class="form__input-icon-error"
-									/>
-								</div>
-								<p class="form__error">Name must be at least 2 characters</p>
-							</div>
-							<div class="form__group form__group--no-margin-top">
-								<label for="phone" class="form__label form__label--small"
-									>Phone</label
-								>
-								<div class="form__text-input form__text-input--small">
-									<input
-										type="tel"
-										name="phone"
-										id="phone"
-										placeholder="Phone"
-										class="form__input"
-										required
-										minlength="10"
-									/>
-									<img
-										src="./assets/icons/form-error.svg"
-										alt=""
-										class="form__input-icon-error"
-									/>
-								</div>
-								<p class="form__error">Phone must be at least 11 characters</p>
-							</div>
-						</div>
-						<div class="form__group">
-							<label for="address" class="form__label form__label--small"
-								>Address</label
-							>
-							<div class="form__text-area">
-								<textarea
-									name="address"
-									id="address"
-									placeholder="Address (Area and street)"
-									class="form__text-area-input"
-									required
-								></textarea>
-								<img
-									src="./assets/icons/form-error.svg"
-									alt=""
-									class="form__input-icon-error"
-								/>
-							</div>
-							<p class="form__error">Address not empty</p>
-						</div>
-						<div class="form__group">
-							<label for="city" class="form__label form__label--small"
-								>City/District/Town</label
-							>
-							<div class="form__text-input form__text-input--small">
-								<input
-									type="text"
-									name=""
-									placeholder="City/District/Town"
-									id="city"
-									class="form__input js-toggle"
-									toggle-target="#city-modal"
-									aria-readonly="true"
-									readonly
-								/>
-								<img
-									src="./assets/icons/form-error.svg"
-									alt=""
-									class="form__input-icon-error"
-								/>
-
-								<div class="form__select-modal hide" id="city-modal">
-									<h3 class="form__modal-heading d-none d-sm-block">
-										City/District/Town
-									</h3>
-									<!-- close button -->
-									<button
-										type="button "
-										class="form__close-modal d-none d-sm-flex js-toggle"
-										toggle-target="#city-modal"
-									>
-										&times;
-									</button>
-
-									<div class="form__search">
-										<input
-											type="text"
-											placeholder="search..."
-											class="form__search-input"
-										/>
-										<img
-											src="./assets/icons/search.svg"
-											class="form__search-icon"
-											alt=""
-										/>
-									</div>
-									<ul class="form__options-list">
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option form__option--current">
-											Ho Chi Minh
-										</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-										<li class="form__option">Ha Noi</li>
-										<li class="form__option">Ho Chi Minh</li>
-										<li class="form__option">Da Nang</li>
-									</ul>
-								</div>
-							</div>
-							<p class="form__error">Phone must be at least 11 characters</p>
-						</div>
-						<div class="form__group form__group--inline">
-							<label class="form__checkbox">
-								<input
-									type="checkbox"
-									name=""
-									id=""
-									class="form__checkbox-input d-none"
-								/>
-								<span class="form__checkbox-label">Set as default address</span>
-							</label>
-						</div>
-					</div>
-					<div class="modal__bottom">
-						<button
-							class="btn btn--small btn--text modal__btn js-toggle"
-							toggle-target="#add-new-address"
-						>
-							Cancel
-						</button>
-						<button
-							type="submit"
-							class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
-							toggle-target="#add-new-address"
-						>
-							Create
-						</button>
-					</div>
-				</form>
-			</div>
-			<div class="modal__overlay"></div>
 		</div>
 
 		<!-- Toggle Dark Mode -->
