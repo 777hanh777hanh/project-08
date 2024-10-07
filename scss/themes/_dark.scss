@@ -118,20 +118,17 @@ html.dark {
 	// Separate
 	--separate-color: #414141;
 
-    // About us
-    --about-us-bg-color: #292e39;
-    --about-us-text-color: #b9babe;
-    --about-us-link-color: #ccc;
-    --about-us-link-active-color: #fff;
+	// About us
+	--about-us-bg-color: #292e39;
+	--about-us-text-color: #b9babe;
+	--about-us-link-color: #ccc;
+	--about-us-link-active-color: #fff;
 
-    // Contact us
-    --contact-us-bg-color: #292e39;
-    --contact-us-text-color: #b9babe;
-    --contact-us-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
-        hue-rotate(191deg) brightness(93%) contrast(83%);
-
-    // Blog
-    --blog-bg-color:
+	// Contact us
+	--contact-us-bg-color: #292e39;
+	--contact-us-text-color: #b9babe;
+	--contact-us-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+		hue-rotate(191deg) brightness(93%) contrast(83%);
 
 	//checkout
 	--checkout-detail-bg-color: #292e39;
@@ -183,4 +180,7 @@ html.dark {
 	// favourite-item
 	--favourite-item-text-color: #b9babe;
 	--favourite-item-border-color: #b9babe;
+
+	// add new card
+	--add-new-card-text-color: #b9babe;
 }

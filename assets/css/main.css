@@ -1909,9 +1909,7 @@ html.dark {
   --contact-us-bg-color: #292e39;
   --contact-us-text-color: #b9babe;
   --contact-us-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
-      hue-rotate(191deg) brightness(93%) contrast(83%);
-  --blog-bg-color:
-  //checkout
+  	hue-rotate(191deg) brightness(93%) contrast(83%);
   --checkout-detail-bg-color: #292e39;
   --checkout-info-bg-color: #171c28;
   --checkout-text-color: #b9babe;
@@ -1948,6 +1946,7 @@ html.dark {
   	hue-rotate(191deg) brightness(93%) contrast(83%);
   --favourite-item-text-color: #b9babe;
   --favourite-item-border-color: #b9babe;
+  --add-new-card-text-color: #b9babe;
 }
 @media (max-width: 1199.98px) {
   html.dark {
@@ -2060,6 +2059,7 @@ html {
   	hue-rotate(220deg) brightness(99%) contrast(94%);
   --favourite-item-text-color: #1a162e;
   --favourite-item-border-color: #d2d1d6;
+  --add-new-card-text-color: #1a162e;
 }
 @media (max-width: 1199.98px) {
   html {
@@ -4431,6 +4431,13 @@ html {
 .page-content__sub-label {
   font-weight: 400;
 }
+.page-content__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-filter: var(--page-content-icon-color);
+  filter: var(--page-content-icon-color);
+}
 .page-content__separate {
   margin: 30px 0;
   height: 1px;
@@ -5941,6 +5948,48 @@ html {
 }
 .profile-menu__link:hover {
   background-color: var(--profile-bg-hover-color);
+}
+
+.add-new-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+@media (max-width: 767.98px) {
+  .add-new-card__heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+}
+.add-new-card__heading:hover {
+  opacity: 0.7;
+}
+.add-new-card__text, .add-new-card__label {
+  font-weight: 600;
+  color: var(--add-new-card-text-color);
+}
+.add-new-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+@media (max-width: 575.98px) {
+  .add-new-card__bottom {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 575.98px) {
+  .add-new-card__bottom .add-new-card__btn {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 374.98px) {
+  .add-new-card__bottom .add-new-card__btn {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

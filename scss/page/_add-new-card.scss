@@ -1,0 +1,47 @@
+@use '../abstracts';
+
+.add-new-card {
+	&__heading {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 30px;
+
+		@include abstracts.screen(sm) {
+			font-size: 1.8rem;
+			margin-bottom: 20px;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&__text,
+	&__label {
+		font-weight: 600;
+		color: var(--add-new-card-text-color);
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 10px;
+
+		@include abstracts.screen(xs) {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+
+	&__bottom &__btn {
+		@include abstracts.screen(xs) {
+			width: 50%;
+		}
+
+		@media screen and (max-width: 374.98px) {
+			width: 100%;
+		}
+	}
+}
