@@ -183,4 +183,9 @@ html.dark {
 
 	// add new card
 	--add-new-card-text-color: #b9babe;
+
+	// user menu
+	--user-menu-bg-hover-color: rgba(235, 235, 235, 0.1);
+	--user-menu-icon-color: brightness(0) saturate(100%) invert(100%) sepia(29%) saturate(261%)
+		hue-rotate(246deg) brightness(116%) contrast(96%);
 }

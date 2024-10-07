@@ -39,6 +39,16 @@
 				<span class="nav-btn__qnt">3</span>
 			</a>
 
+			<a id="switch-theme-btn" class="switch-theme-btn nav-btn d-none d-lg-flex">
+				<span>Dark mode</span>
+				<img
+					src="./assets/icons/moon.svg"
+					alt=""
+					class="user-menu__icon nav-btn__qnt hide"
+				/>
+				<img src="./assets/icons/sun.svg" alt="" class="user-menu__icon nav-btn__qnt" />
+			</a>
+
 			<!-- navbar list -->
 			<ul class="navbar__list js-dropdown-list">
 				<li class="navbar__item">
@@ -7254,6 +7264,79 @@
 
 			<div class="top-act__user">
 				<img src="./assets/img/avatar.jpg" alt="" class="top-act__avatar" />
+
+				<!-- dropdown -->
+				<div class="act-dropdown top-act__dropdown">
+					<div class="act-dropdown__inner user__menu">
+						<img
+							class="act-dropdown__arrow top-act__dropdown-arrow"
+							src="./assets/icons/arrow-up.png"
+							alt=""
+						/>
+
+						<div class="user-menu__top">
+							<img src="./assets/img/avatar.jpg" alt="" class="user-menu__avatar" />
+							<div>
+								<p class="user-menu__name">Imran Khan</p>
+								<p class="user-menu__username">@imrankhan</p>
+							</div>
+						</div>
+
+						<ul class="user-menu__list">
+							<li>
+								<a href="./profile.html" class="user-menu__link"
+									>Profile
+									<img
+										src="./assets/icons/user-1.svg"
+										alt=""
+										class="user-menu__icon"
+								/></a>
+							</li>
+							<li>
+								<a href="./favourite.html" class="user-menu__link"
+									>Favourite List
+									<img
+										src="./assets/icons/heart-dark.svg"
+										alt=""
+										class="user-menu__icon"
+								/></a>
+							</li>
+							<li class="user-menu__separate">
+								<a id="switch-theme-btn" class="switch-theme-btn user-menu__link">
+									<span>Dark mode</span>
+									<img
+										src="./assets/icons/moon.svg"
+										alt=""
+										class="user-menu__icon hide"
+									/>
+									<img
+										src="./assets/icons/sun.svg"
+										alt=""
+										class="user-menu__icon"
+									/>
+								</a>
+							</li>
+							<li>
+								<a href="./profile.html" class="user-menu__link"
+									>Settings
+									<img
+										src="./assets/icons/settings.svg"
+										alt=""
+										class="user-menu__icon"
+								/></a>
+							</li>
+							<li class="user-menu__separate">
+								<a href="./sign-in.html" class="user-menu__link"
+									>Logout
+									<img
+										src="./assets/icons/logout.svg"
+										alt=""
+										class="user-menu__icon"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

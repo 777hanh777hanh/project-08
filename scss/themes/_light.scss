@@ -177,4 +177,9 @@ html {
 
 	// add new card
 	--add-new-card-text-color: #1a162e;
+
+	// user menu
+	--user-menu-bg-hover-color: #f6f6f6;
+	--user-menu-icon-color: brightness(0) saturate(100%) invert(7%) sepia(5%) saturate(5413%)
+		hue-rotate(185deg) brightness(98%) contrast(90%);
 }

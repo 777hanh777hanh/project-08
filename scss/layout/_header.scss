@@ -238,6 +238,15 @@
 		min-height: 3rem;
 	}
 
+	&__user {
+		position: relative;
+
+		&:hover .act-dropdown {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
 	&__avatar {
 		$w: 5rem;
 		$h: $w;
@@ -248,9 +257,19 @@
 		border-radius: 8px;
 		cursor: pointer;
 	}
+
+	&__dropdown {
+		right: -18px !important;
+		width: min(320px, 100vw) !important;
+	}
+
+	&__dropdown-arrow {
+		right: 12px !important;
+	}
 }
 
 .nav-btn {
+	width: 100%;
 	align-items: center;
 	gap: 16px;
 	padding: 10px 40px;
@@ -413,5 +432,74 @@
 		font-size: 1.5rem;
 		font-weight: 500;
 		line-height: 146.667%;
+	}
+}
+
+.user-menu {
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__avatar {
+		width: 56px;
+		height: 56px;
+		border-radius: 10px;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 1.8rem;
+	}
+
+	&__username {
+		margin-top: 6px;
+		font-size: 1.4rem;
+	}
+
+	&__list {
+		margin-top: 30px;
+
+		@include abstracts.screen(md) {
+			margin-top: 20px;
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		padding: 12px 10px;
+		margin-left: -10px;
+		margin-right: -10px;
+		border-radius: 4px;
+
+		&:hover {
+			background: var(--user-menu-bg-hover-color);
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 18px;
+		height: 18px;
+		-webkit-filter: var(--user-menu-icon-color);
+		filter: var(--user-menu-icon-color);
+
+		&.hide {
+			display: none !important;
+		}
+	}
+
+	&__separate {
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top: 1px solid var(--separate-color);
 	}
 }
