@@ -115,6 +115,24 @@ html.dark {
 	// Text content
 	--hr-bg-color: #414141;
 
+	// Separate
+	--separate-color: #414141;
+
+    // About us
+    --about-us-bg-color: #292e39;
+    --about-us-text-color: #b9babe;
+    --about-us-link-color: #ccc;
+    --about-us-link-active-color: #fff;
+
+    // Contact us
+    --contact-us-bg-color: #292e39;
+    --contact-us-text-color: #b9babe;
+    --contact-us-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+        hue-rotate(191deg) brightness(93%) contrast(83%);
+
+    // Blog
+    --blog-bg-color:
+
 	//checkout
 	--checkout-detail-bg-color: #292e39;
 	--checkout-info-bg-color: #171c28;
@@ -130,7 +148,39 @@ html.dark {
 	--modal-info-bg-color: #2f3441;
 	--modal-shadow-color: rgba(23, 28, 40, 0.4);
 
-	//payment
-	--payment-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+	// profile
+	--profile-bg-color: #171c28;
+	--profile-bg-hover-color: rgba(235, 235, 235, 0.1);
+
+	--profile-shadow-color: rgba(23, 28, 40, 0.2);
+	--profile-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
 		hue-rotate(191deg) brightness(93%) contrast(83%);
+	--profile-text-color: #b9babe;
+
+	// page-content
+	--page-content-detail-bg-color: #292e39;
+	--page-content-info-bg-color: #171c28;
+	--page-content-text-color: #b9babe;
+	--page-content-shadow-color: rgba(23, 28, 40, 0.2);
+	--page-content-separate-color: #292e39;
+	--page-content-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+		hue-rotate(191deg) brightness(93%) contrast(83%);
+	--page-content-gift-icon-bg-color: #292e39;
+	--page-content-payment-item-bg-color: #2f3441;
+
+	// payment card
+	--payment-card-text-color: #b9babe;
+	--payment-card-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+		hue-rotate(191deg) brightness(93%) contrast(83%);
+
+	// account info
+	--account-info-bg-color: #2f3441;
+	--account-info-img-bg-color: #171c28;
+	--account-info-text-color: #b9babe;
+	--account-info-icon-color: brightness(0) saturate(100%) invert(82%) sepia(8%) saturate(95%)
+		hue-rotate(191deg) brightness(93%) contrast(83%);
+
+	// favourite-item
+	--favourite-item-text-color: #b9babe;
+	--favourite-item-border-color: #b9babe;
 }

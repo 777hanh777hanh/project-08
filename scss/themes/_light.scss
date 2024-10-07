@@ -119,6 +119,9 @@ html {
 	// Text content
 	--hr-bg-color: #ebebeb;
 
+	// Separate
+	--separate-color: #ebebeb;
+
 	//checkout
 	--checkout-detail-bg-color: #f6f6f6;
 	--checkout-info-bg-color: #fff;
@@ -133,4 +136,42 @@ html {
 	// modal
 	--modal-info-bg-color: #fff;
 	--modal-shadow-color: rgba(200, 200, 200, 0.4);
+
+	// profile
+	--profile-bg-color: #fff;
+	--profile-bg-hover-color: #f6f6f6;
+	--profile-shadow-color: rgba(237, 237, 246, 0.2);
+	--profile-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
+		hue-rotate(220deg) brightness(99%) contrast(94%);
+	--profile-text-color: #1a162e;
+	--profile-text-active-color: #0071dc;
+	--profile-icon-active-color: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(1659%)
+		hue-rotate(192deg) brightness(101%) contrast(104%);
+
+	// page content
+	--page-content-detail-bg-color: #f6f6f6;
+	--page-content-info-bg-color: #fff;
+	--page-content-text-color: #1a162e;
+	--page-content-shadow-color: rgba(237, 237, 246, 0.2);
+	--page-content-separate-color: #d2d1d6;
+	--page-content-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
+		hue-rotate(220deg) brightness(99%) contrast(94%);
+	--page-content-gift-icon-bg-color: rgba(118, 68, 225, 0.1);
+	--page-content-payment-item-bg-color: #f6f6f6;
+
+	// new card
+	--payment-card-text-color: #d2d1d6;
+	--payment-card-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
+		hue-rotate(220deg) brightness(99%) contrast(94%);
+
+	// account info
+	--account-info-bg-color: #f6f6f6;
+	--account-info-img-bg-color: #fff;
+	--account-info-text-color: #1a162e;
+	--account-info-icon-color: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(5879%)
+		hue-rotate(220deg) brightness(99%) contrast(94%);
+
+	// favourite-item
+	--favourite-item-text-color: #1a162e;
+	--favourite-item-border-color: #d2d1d6;
 }

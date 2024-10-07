@@ -1,0 +1,134 @@
+.payment-card {
+	position: relative;
+
+	padding: 20px;
+	height: 100%;
+
+	color: #fff;
+	border-radius: 10px;
+	background: var(--bg-color);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow: hidden;
+	z-index: 0;
+
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	&__img,
+	&__icon {
+		z-index: -1;
+		pointer-events: none;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	&__type {
+		color: #fff;
+		font-size: 1.4rem;
+		font-weight: 600;
+		line-height: 142.857%;
+	}
+
+	&__number {
+		margin-top: 37px;
+		color: #fff;
+		font-size: 1.8rem;
+		font-weight: 600;
+		line-height: 144.444%;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+
+		margin-top: 20px;
+	}
+
+	&__label {
+		color: #fff;
+		font-size: 0.8rem;
+		font-weight: 600;
+		line-height: 175%;
+	}
+
+	&__value {
+		color: #fff;
+		font-weight: 600;
+		font-size: 1rem;
+		font-style: normal;
+		line-height: 140%;
+	}
+
+	&__expired {
+		margin-left: 40px;
+		margin-right: auto;
+	}
+
+	&__circle {
+		--circle-width: 42px;
+		--circle-height: 28px;
+
+		position: relative;
+		width: var(--circle-width);
+		height: var(--circle-height);
+
+		&::before,
+		&::after {
+			content: '';
+
+			position: absolute;
+			top: 0;
+			height: 100%;
+
+			width: var(--circle-height);
+			height: var(--circle-height);
+			border-radius: 50%;
+		}
+
+		&::before {
+			left: 0;
+			background-color: #f94545;
+			mix-blend-mode: hard-light;
+			z-index: 1;
+		}
+
+		&::after {
+			right: 0;
+			background-color: #ffb700;
+		}
+	}
+}
+
+.new-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	height: 100%;
+	min-height: 170px;
+
+	border-radius: 10px;
+	border: 1px dashed #d2d1d6;
+
+	&__icon {
+		-webkit-filter: var(--payment-card-icon-color);
+		filter: var(--payment-card-icon-color);
+	}
+
+	&__text {
+		color: var(--payment-card-text-color);
+		font-size: 1.4rem;
+		font-weight: 600;
+		line-height: 142.857%;
+	}
+}

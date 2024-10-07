@@ -107,3 +107,10 @@ strong {
 		padding-right: 20px !important;
 	}
 }
+
+.separate {
+	margin-top: var(--margin-block);
+	margin-bottom: var(--margin-block);
+	height: 1px;
+	background-color: var(--separate-color);
+}
